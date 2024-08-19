@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NFUWebMisc" Class="QuizDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NFUSQLPROD02;Initial Catalog=NFUWebMisc;Persist Security Info=True;User ID=cmsadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="NFUWebMiscConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.Quiz_Answers_GetByQuizId" Method="Quiz_Answers_GetByQuizId">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Answers_GetByQuizIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="MaxScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Sections_GetByQuizId" Method="Quiz_Sections_GetByQuizId">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Sections_GetByQuizIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Entries_GetByQuizId" Method="Quiz_Entries_GetByQuizId">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Entries_GetByQuizIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.Decimal" DbType="Decimal(18,1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Results_GetByEntryId" Method="Quiz_Results_GetByEntryId">
+    <Parameter Name="EntryId" Parameter="entryId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Results_GetByEntryIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OptionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Options_GetById" Method="Quiz_Options_GetById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Options_GetByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuestionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Score" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Options_GetByQuestionId" Method="Quiz_Options_GetByQuestionId">
+    <Parameter Name="QuestionId" Parameter="questionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Options_GetByQuestionIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuestionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Score" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Questions_GetByQuizId" Method="Quiz_Questions_GetByQuizId">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Questions_GetByQuizIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SectionId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Alias" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BinaryAnswer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MaxScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="MinScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Questions_GetBySectionId" Method="Quiz_Questions_GetBySectionId">
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Questions_GetBySectionIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SectionId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Alias" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BinaryAnswer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MaxScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="MinScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Questions_GetById" Method="Quiz_Questions_GetById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Questions_GetByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SectionId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Alias" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BinaryAnswer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MaxScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="MinScore" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Entries_Insert" Method="Quiz_Entries_Insert">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Score" Parameter="score" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <ElementType Name="Quiz_Entries_InsertResult">
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Results_Insert" Method="Quiz_Results_Insert">
+    <Parameter Name="EntryId" Parameter="entryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OptionId" Parameter="optionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Results_InsertResult">
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_GetAll" Method="Quiz_GetAll">
+    <ElementType Name="Quiz_GetAllResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Logo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackgroundImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Colours" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequiredResourceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_GetById" Method="Quiz_GetById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_GetByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Logo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackgroundImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Colours" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequiredResourceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Resources_GetById" Method="Quiz_Resources_GetById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Resources_GetByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_RequiredResources_GetByQuizId" Method="Quiz_RequiredResources_GetByQuizId">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_RequiredResources_GetByQuizIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResourceId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Options_Insert" Method="Quiz_Options_Insert">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionId" Parameter="questionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ResourceId" Parameter="resourceId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Score" Parameter="score" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Insert" Method="Quiz_Insert">
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Logo" Parameter="logo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BackgroundImage" Parameter="backgroundImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Colours" Parameter="colours" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MinQuestionCount" Parameter="minQuestionCount" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_InsertResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Resources_Insert" Method="Quiz_Resources_Insert">
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Url" Parameter="url" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ImageUrl" Parameter="imageUrl" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="Quiz_Resources_InsertResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Sections_Insert" Method="Quiz_Sections_Insert">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MinQuestionCount" Parameter="minQuestionCount" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Sections_InsertResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Questions_Insert" Method="Quiz_Questions_Insert">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Alias" Parameter="alias" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BinaryAnswer" Parameter="binaryAnswer" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="MaxScore" Parameter="maxScore" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <Parameter Name="MinScore" Parameter="minScore" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <ElementType Name="Quiz_Questions_InsertResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_RequiredResources_Insert" Method="Quiz_RequiredResources_Insert">
+    <Parameter Name="QuizId" Parameter="quizId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ResourceId" Parameter="resourceId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Delete" Method="Quiz_Delete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Update" Method="Quiz_Update">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Logo" Parameter="logo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BackgroundImage" Parameter="backgroundImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Colours" Parameter="colours" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MinQuestionCount" Parameter="minQuestionCount" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Options_Delete" Method="Quiz_Options_Delete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Options_Update" Method="Quiz_Options_Update">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionId" Parameter="questionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ResourceId" Parameter="resourceId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Score" Parameter="score" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Questions_Delete" Method="Quiz_Questions_Delete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Questions_Update" Method="Quiz_Questions_Update">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Alias" Parameter="alias" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BinaryAnswer" Parameter="binaryAnswer" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="MaxScore" Parameter="maxScore" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <Parameter Name="MinScore" Parameter="minScore" Type="System.Decimal" DbType="Decimal(18,1)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_RequiredResources_Delete" Method="Quiz_RequiredResources_Delete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Resources_Update" Method="Quiz_Resources_Update">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Url" Parameter="url" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ImageUrl" Parameter="imageUrl" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Sections_Delete" Method="Quiz_Sections_Delete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Sections_Update" Method="Quiz_Sections_Update">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MinQuestionCount" Parameter="minQuestionCount" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Quiz_Sections_GetById" Method="Quiz_Sections_GetById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Quiz_Sections_GetByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Quiz_Resources_Delete" Method="Quiz_Resources_Delete">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

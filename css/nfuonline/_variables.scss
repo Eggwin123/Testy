@@ -1,0 +1,184 @@
+﻿@import "../shared/colours";
+@import "../shared/communitiesColours";
+
+
+
+//custom variables
+// Logos
+$nfulogo-ratio: 872/240;
+$nfulogostrap-ratio: 2350/260;
+$gotlogoring-ratio: 1512/1512;
+$gotlogostack-ratio: 2600/900;
+$gotlogobolt-ratio: 1040/900;
+// Membership
+$membershipTabsHeight: 8vw;
+$membershipTabsHeightSm: 1em;
+$membershipTabsHeightMd: 1.5em;
+$membershipTabsHeightLg: 2.25em;
+$membershipTabsHeightXl: 2.75em;
+$membershipAssRatio: 568/200;
+$membershipFgRatio: 728/300;
+$membershipCsRatio: 650/150;
+$membershipProRatio: 518/200;
+$membershipProfessionalRatio: 1082/376;
+$membershipSyfRatio: 882/528;
+$membershipBiggestRatio: $membershipCsRatio;
+$member-exclusive-badge-background: $bayleaf;
+//Typography
+$pseudoPound: "\00a3";
+$pseudoPercent: "\0025";
+// Colour system
+$gray-100: $nfu-gray-100;
+$gray-200: $nfu-gray-200;
+$gray-300: $nfu-gray-300;
+$gray-400: $nfu-gray-400;
+$gray-500: $nfu-gray-500;
+$gray-600: $nfu-gray-600;
+$gray-700: $nfu-gray-700;
+$gray-800: $nfu-gray-800;
+$gray-900: $nfu-gray-900;
+$primary: $nfu-600;
+$secondary: $bayleaf;
+$info: $sky-blue;
+$success: $grass-green;
+$orange: $orange;
+$gray: $gray-600;
+$gray-dark: $gray-800;
+$light: $gray-100;
+$dark: $gray-dark;
+// Body
+$body-color: $gray-800;
+// Links
+$link-hover-decoration: none;
+// Paragraphs
+$paragraph-margin-bottom: 1.5rem;
+// Grid breakpoints
+$grid-breakpoints: (
+    xs: 0px,
+    vs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1366px,
+    xxl: 1600px
+);
+// Grid containers
+$container-max-widths: (
+    sm: 540px,
+    md: 740px,
+    lg: 1000px,
+    xl: 1260px
+);
+// Grid columns
+$grid-gutter-width: 2rem;
+// Components
+$border-style: solid;
+$aspect-ratios: (
+    "1x1": 100%,
+    "4x3": calc(3 / 4 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+    "21x9": calc(9 / 21 * 100%),
+    "a-portrait": calc(420 / 297 * 102.5%),
+    "a-landscape": calc(297 / 420 * 102.5%),
+    // ads iframe has an 8px body margin but the ads are 720 x 150px
+    "adverts-rotator": calc((150 + 16) / (720 + 16) * 100%)
+);
+// Typography
+$font-base: 1em;
+$font-tags: 1.3rem;
+$header-size-base: 1em;
+$header-size-scale: 1.15;
+$font-size-sm: $font-base * .8;
+$font-weight-bold: 600;
+$font-weight-bolder: $font-weight-bold;
+$line-height-base: 1.6;
+$line-height-sm: 1.15;
+$line-height-md: 1.3;
+$line-height-lg: $line-height-base;
+$h6-font-size: $header-size-base * $header-size-scale;
+$h5-font-size: $h6-font-size * $header-size-scale;
+$h4-font-size: $h5-font-size * $header-size-scale;
+$h3-font-size: $h4-font-size * $header-size-scale;
+$h2-font-size: $h3-font-size * $header-size-scale;
+$h1-font-size: $h2-font-size * $header-size-scale;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: $line-height-sm;
+$lead-font-weight: $font-weight-bold;
+$small-font-size: $font-size-sm;
+$text-muted: $gray-500;
+// Tables
+$table-master-color: $secondary;
+$table-cell-vertical-align: middle;
+$table-striped-bg-factor: .1;
+$table-striped-bg: rgba($table-master-color, $table-striped-bg-factor);
+$table-active-bg-factor: .2;
+$table-active-bg: rgba($table-master-color, $table-active-bg-factor);
+$table-hover-bg-factor: .3;
+$table-hover-bg: rgba($table-master-color, $table-hover-bg-factor);
+$table-border-width: .125rem;
+$table-border-color: $table-master-color;
+$table-bg-scale: -85%;
+// Dropdowns
+$dropdown-link-color: $gray-600;
+// Buttons
+$btn-hover-bg-shade-amount: 15%;
+$btn-hover-bg-tint-amount: 20%;
+$btn-hover-border-shade-amount: 20%;
+$btn-hover-border-tint-amount: 15%;
+$btn-active-bg-shade-amount: 20%;
+$btn-active-bg-tint-amount: 25%;
+$btn-active-border-shade-amount: 25%;
+$btn-active-border-tint-amount: 15%;
+// Accordion
+$accordion-icon-width: 1.875rem;
+$accordion-icon-color: $secondary;
+$accordion-icon-active-color: $primary;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+// Popover-variables
+$popover-max-width: 300px;
+$popover-border-color: rgba($primary, .5);
+$popover-header-color: $primary;
+$popover-arrow-outer-color: fade-in($popover-border-color, .15);
+// Pagination
+$pagination-color: $body-color;
+$pagination-bg: $white;
+$pagination-border-width: 0;
+$pagination-border-radius: 0;
+$pagination-focus-color: $white;
+$pagination-focus-bg: $nfu-600;
+$pagination-hover-color: $white;
+$pagination-hover-bg: $nfu-600;
+$pagination-active-color: $white;
+$pagination-active-bg: $nfu-200;
+$pagination-disabled-color: $gray-400;
+$pagination-disabled-bg: $gray-100;
+$pagination-border-radius-sm: 0;
+$pagination-border-radius-lg: 0;
+
+
+
+
+
+
+
+
+
+
+//Block UI
+$blockUI-background: $nfu-900;
+$blockUI-colour: $nfu-50;
+//Social
+$social-generic: $gray-600;
+
+
+
+//Weekly look ahead
+$wla-clr-background: $nfu-50;
+$wla-clr-border: $nfu-300;
+$wla-clr-title-text: $nfu-800;
+$wla-clr-date-text: $wla-clr-background;
+$wla-clr-date-background: $nfu-100;
+$wla-spacing-lg: 1.75rem;
+$wla-spacing-md: 1.25rem;
+$wla-spacing-sm: 0.75rem;

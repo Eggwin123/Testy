@@ -1,0 +1,48 @@
+﻿// import only the necessary Bootstrap files
+@import "../bootstrap-4.5.3/scss/functions";
+@import "../bootstrap-4.5.3/scss/variables";
+// overides and additions
+$header-size-base: .8rem;
+$h1-font-size: $header-size-base * 2.5;
+$h2-font-size: $header-size-base * 2;
+$h3-font-size: $header-size-base * 1.75;
+$h4-font-size: $header-size-base * 1.5;
+$h5-font-size: $header-size-base * 1.25;
+$h6-font-size: $header-size-base;
+// import Bootstrap to set the changes
+@import "../bootstrap-4.5.3/scss/bootstrap";
+
+
+// full height for low content pages
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    & .body {
+        flex-grow: 1;
+    }
+
+    & #masthead,
+    & #welcomeMessage,
+    & nav#nav,
+    & footer {
+        flex-shrink: 0;
+    }
+}
+
+
+// hidden grecaptca badge - display message instead
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+
+@import 'fonts';
+@import 'backgrounds';
+@import 'buttons';
+@import 'borders';
+@import 'widths';

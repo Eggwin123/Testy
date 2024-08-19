@@ -1,0 +1,3 @@
+﻿$colors: map-remove($colors, "indigo", "purple", "pink", "teal", "cyan");
+$theme-colors: map-merge($custom-theme-colours, $theme-colors);
+$table-variants: map-merge($custom-table-variants, $table-variants);

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UmbracoDev">
+  <DataContextMoniker Name="/UmbracoDevDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1c2d5092-e79d-430a-870a-c3a0fd02f32e" absoluteBounds="4, 2.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/UmbracoDevDataContext/cmsContentNu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7ffc50e-bcd4-435a-bc80-aedcf7287aa6" absoluteBounds="4.015, 2.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

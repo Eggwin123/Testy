@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Ngage">
+  <DataContextMoniker Name="/NgageDataContext" />
+  <nestedChildShapes>
+    <classShape Id="11f13e16-8130-4283-94ef-6ed9d255e5c5" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/NgageDataContext/PageToTree" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6aea1a5a-ddad-4668-b676-51344a2d2453" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b200ba06-36dd-4068-977b-1a040ed14e99" absoluteBounds="4.25, 1.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/NgageDataContext/UrlAlia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eec4b031-4aa8-4f4f-ad1b-c7239a30dc91" absoluteBounds="4.265, 2.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

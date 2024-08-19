@@ -1,0 +1,132 @@
+﻿$community-gray-050: #f7f7f7;
+$community-gray-100: #eeeeee;
+$community-gray-200: #e3e3e3;
+$community-gray-300: #d1d1d1;
+$community-gray-400: #acacac;
+$community-gray-500: #8b8b8b;
+$community-gray-600: #646464;
+$community-gray-700: #515151;
+$community-gray-800: #333333;
+$community-gray-900: #131313;
+
+//https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+$community-1-050: #e6f2fa;
+$community-1-100: #c2def4;
+$community-1-200: #9ecbee;
+$community-1-300: #7db6e5;
+$community-1-400: #67a7e0; // malibu (blue) 210
+$community-1-500: #5199df;
+$community-1-600: #4a8bd1;
+$community-1-700: #4079bf;
+$community-1-800: #3869ae;
+$community-1-900: #284c91;
+
+$community-2-050: #e4f9ed;
+$community-2-100: #beefd3;
+$community-2-200: #90e5b7;
+$community-2-300: #57db99;
+$community-2-400: #00d282; //caribbean green (green) 150
+$community-2-500: #00c86c;
+$community-2-600: #00b861;
+$community-2-700: #00a454;
+$community-2-800: #009348;
+$community-2-900: #007232;
+
+$community-3-050: #f5e3f8;
+$community-3-100: #e6baef;
+$community-3-200: #d68ae5;
+$community-3-300: #c557db;
+$community-3-400: #b825d3; // dark orchid (violet) 290
+$community-3-500: #a700c6;
+$community-3-600: #9700c1;
+$community-3-700: #8100bb;
+$community-3-800: #6d00b3;
+$community-3-900: #4300a7;
+
+$community-4-050: #f5e7e4;
+$community-4-100: #efc7b5;
+$community-4-200: #e5a486;
+$community-4-300: #db8357;
+$community-4-400: #d56b33; // gold drop (orange) 20
+$community-4-500: #d05502;
+$community-4-600: #c64f00;
+$community-4-700: #ba4900;
+$community-4-800: #ad4200;
+$community-4-900: #953500;
+
+$communities-hue: (
+    "1": hue($community-1-400),
+    "2": hue($community-2-400),
+    "3": hue($community-3-400),
+    "4": hue($community-4-400),
+);
+
+$communities-050: (
+    "1": $community-1-050,
+    "2": $community-2-050,
+    "3": $community-3-050,
+    "4": $community-4-050,
+);
+
+$communities-100: (
+    "1": $community-1-100,
+    "2": $community-2-100,
+    "3": $community-3-100,
+    "4": $community-4-100,
+);
+
+$communities-200: (
+    "1": $community-1-200,
+    "2": $community-2-200,
+    "3": $community-3-200,
+    "4": $community-4-200,
+);
+
+$communities-300: (
+    "1": $community-1-300,
+    "2": $community-2-300,
+    "3": $community-3-300,
+    "4": $community-4-300,
+);
+
+$communities-400: (
+    "1": $community-1-400,
+    "2": $community-2-400,
+    "3": $community-3-400,
+    "4": $community-4-400,
+);
+
+$communities-500: (
+    "1": $community-1-500,
+    "2": $community-2-500,
+    "3": $community-3-500,
+    "4": $community-4-500,
+);
+
+$communities-600: (
+    "1": $community-1-600,
+    "2": $community-2-600,
+    "3": $community-3-600,
+    "4": $community-4-600,
+);
+
+$communities-700: (
+    "1": $community-1-700,
+    "2": $community-2-700,
+    "3": $community-3-700,
+    "4": $community-4-700,
+);
+
+$communities-800: (
+    "1": $community-1-800,
+    "2": $community-2-800,
+    "3": $community-3-800,
+    "4": $community-4-800,
+);
+
+$communities-900: (
+    "1": $community-1-900,
+    "2": $community-2-900,
+    "3": $community-3-900,
+    "4": $community-4-900,
+);

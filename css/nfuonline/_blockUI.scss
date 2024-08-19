@@ -1,0 +1,20 @@
+﻿.blockUI {
+    &.blockOverlay {
+        z-index: 3000 !important;
+        background-color: $blockUI-background !important;
+    }
+
+    &.blockMsg.blockPage {
+        z-index: 3011 !important;
+        color: $blockUI-colour !important;
+        border: 0 !important;
+        background-color: transparent !important;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 2rem;
+            color: inherit;
+        }
+    }
+}

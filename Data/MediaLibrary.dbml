@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NFU_Media_Centre" Class="MediaLibraryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NFUSQLPROD02;Initial Catalog=NFU_Media_Centre;User ID=cmsadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="NFU_Media_CentreConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.Assets_SelectByFilename" Method="Assets_SelectByFilename">
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="Assets_SelectByFilenameResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Column Name="FileLocation" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FileExt" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OrgFileName" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Column Name="AssetTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Source" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsStaffOnly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsWeb" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrint" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CopyrightName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsCopyright" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateTaken" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UploadStatus" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Impressions" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OldEktronId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UsageNotes" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="LastChanged" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Assets_KeywordsString" Method="Assets_KeywordsString">
+    <Parameter Name="assetId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="Assets_KeywordsStringResult">
+      <Column Name="Keywords" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="KeywordsText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AssetToCategories_ByAssetId" Method="AssetToCategories_ByAssetId">
+    <Parameter Name="AssetId" Parameter="assetId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="AssetToCategories_ByAssetIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AssetId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Categories_SelectById" Method="Categories_SelectById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="Categories_SelectByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Parent" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsWeb" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsPrint" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,75 @@
+p, ul, ol {
+    font-size: 1rem; /*10px*/
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    max-width: 100%;
+}
+
+.subheading-1 {
+	font-weight: 400;
+	font-size: 2rem; /*20px*/
+	color: #4d4d4d;
+}
+
+.subheading-2 {
+	font-weight: 700;
+	font-size: 1rem; /*10px*/
+	color: #4d4d4d;
+}
+
+.lead {
+	font-weight: 400;
+	font-size: 1.5rem; /*15px*/
+	color: black;
+}
+
+.footnote {
+	font-weight: 300;
+	font-size: .8rem; /*8px*/
+	margin-bottom: .6rem; /*6px*/
+	color: black;
+}
+
+.footnote:last-of-type {
+	margin-bottom: 0;
+}
+
+.example {
+	border-left: .6rem solid #cccccc; /*6px*/
+	padding-left: 1.2rem; /*12px*/
+}
+
+.panel-20 {
+    background-color: #cccccc;
+    padding: 2rem; /*20px*/
+    margin-bottom: 1rem; /*10px*/
+}
+
+.panel-20 .subheading-1 {
+	font-size: 1.5rem; /*15px*/
+	color: black;
+}
+
+.panel-20 .subheading-2 {
+	color: black;
+}
+
+blockquote {
+	background: #e6e6e6;
+	border-left-width: .8rem; /*8px*/
+	border-left-style: solid;
+	border-left-color: #00aeef;
+	margin-bottom: 1.6rem; /*16px*/
+	padding: .8rem 1.6rem; /* 8px 16px*/
+	width: 100%;
+}
+
+blockquote.blockquote-alt {
+	border-left-color: #4d4d4d;
+}

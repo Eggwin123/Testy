@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NFU_WEB" Class="CommunitiesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="NFU_COM.NFU_COM_Banned_Words" Member="NFU_COM_Banned_Words">
+    <Type Name="NFU_COM_Banned_Word">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="word" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_Comment_Like" Member="NFU_COM_Comment_Likes">
+    <Type Name="NFU_COM_Comment_Like">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="membership_number" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="comment_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_Communities" Member="NFU_COM_Communities">
+    <Type Name="NFU_COM_Community">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="NFU_COM_Community_NFU_COM_Community_Member" Member="NFU_COM_Community_Members" ThisKey="id" OtherKey="community_id" Type="NFU_COM_Community_Member" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_Community_Members" Member="NFU_COM_Community_Members">
+    <Type Name="NFU_COM_Community_Member">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="membership_number" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="community_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="date_deleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="deleted_by_mod_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="data_added" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="date_left" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="NFU_COM_Community_NFU_COM_Community_Member" Member="NFU_COM_Community" ThisKey="community_id" OtherKey="id" Type="NFU_COM_Community" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_Deleted_Comment_Type" Member="NFU_COM_Deleted_Comment_Types">
+    <Type Name="NFU_COM_Deleted_Comment_Type">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ComName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NFU_COM_Deleted_Comment_Type_NFU_COM_Comment" Member="NFU_COM_Comments" ThisKey="Id" OtherKey="deleted_type_id" Type="NFU_COM_Comment" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_Staff_Names" Member="NFU_COM_Staff_Names">
+    <Type Name="NFU_COM_Staff_Name">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_User_Tracker" Member="NFU_COM_User_Trackers">
+    <Type Name="NFU_COM_User_Tracker">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="community_member_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="member_timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="joined_community" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="left_community" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_Comments" Member="NFU_COM_Comments">
+    <Type Name="NFU_COM_Comment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="comment" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="membership_number" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="member_name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="umbraco_page_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="community_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date_added" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="parent_community_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="flagged_for_admin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deleted_by" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="deleted_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="moderated_by" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="moderated_on" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="moderator_comments" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="seen_by_mod" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="user_left_community" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="deleted_type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="send_to_moderator_email" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="send_to_moderator_email_note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="send_to_moderated_email_on" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="NFU_COM_Deleted_Comment_Type_NFU_COM_Comment" Member="NFU_COM_Deleted_Comment_Type" ThisKey="deleted_type_id" OtherKey="Id" Type="NFU_COM_Deleted_Comment_Type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="NFU_COM.NFU_COM_Mod_Users" Member="NFU_COM_Mod_Users">
+    <Type Name="NFU_COM_Mod_User">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="pw" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="last_logged_in" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="membership_number" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="NFU_COM.NFU_COM_Get_Community_Ids_By_Member" Method="NFU_COM_Get_Community_Ids_By_Member">
+    <Parameter Name="member_name" Type="System.String" DbType="NVarChar(10)" />
+    <ElementType Name="NFU_COM_Get_Community_Ids_By_MemberResult">
+      <Column Name="community_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="NFU_COM.NFU_COM_Get_MemberNumbers_By_CommunityId" Method="NFU_COM_Get_MemberNumbers_By_CommunityId">
+    <Parameter Name="community_id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="NFU_COM_Get_MemberNumbers_By_CommunityIdResult">
+      <Column Name="NumberOfMembers" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

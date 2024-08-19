@@ -1,0 +1,269 @@
+﻿$nfu-green: #006938;
+$black: #000000;
+$white: #ffffff;
+$grey-100: #f0f0f0;
+$grey-200: #ececec;
+$grey-300: #d5d5d5;
+
+$community-primary: #014886;
+$community-secondary: #72c392;
+
+$blockUI-background: $community-primary;
+$blockUI-colour: $white;
+
+$btn-hover-bg-shade-amount: 20%;
+$btn-hover-bg-tint-amount: 20%;
+$btn-hover-border-shade-amount: 15%;
+$btn-hover-border-tint-amount: 15%;
+
+
+
+body {
+    background-color: $grey-100;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+/* #region Login */
+.card.login {
+    border-color: $community-primary;
+
+    .card-title {
+        color: $community-primary;
+    }
+
+    .form-check-label {
+        color: $community-primary;
+    }
+}
+/* #endregion */
+
+.questionContainer.hide-showonsite,
+.questionContainer.hide-isfromfloor,
+.questionContainer.hide-rejected,
+.questionContainer.hide-answered,
+.questionContainer.hide-passedtochair,
+.questionContainer.hide-unmoderated {
+    display: none !important;
+}
+
+.form-check.form-switch {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.refreshPrompt {
+    background-color: var(--bs-danger);
+    color: var(--bs-light);
+}
+
+.refreshPrompt:hover {
+    background-color: var(--bs-sweetpink);
+    color: var(--bs-light);
+}
+
+/* #region Community List */
+.community-list-header {
+    color: $community-primary;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: $community-secondary;
+    text-underline-offset: .15em;
+}
+
+.community-list-item {
+    color: $community-primary;
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+/* #endregion */
+
+/* #region live comments */
+.community_admin-header {
+    color: $community-primary;
+    z-index: 100;
+    /*position: fixed;*/
+
+    /*.back-to-communities{
+        margin: 4px 0;
+    }*/
+}
+
+.admin-comment-header {
+    line-height: 1.2;
+    border-bottom: 2px solid $community-secondary;
+
+    @media (min-width: 768px) {
+        /*> div {
+            align-self: flex-end;
+        }*/
+
+        > div:not(:last-child) {
+            border-right: 1px solid gray;
+        }
+    }
+}
+
+.admin-comments {
+    color: $community-primary;
+    /*position: fixed;
+    top: 167px;
+    width: 82%;
+    z-index: 99;*/
+    max-height: 522px;
+    overflow-y: scroll;
+}
+/* #endregion */
+
+.admin-comment-item-alt {
+    /*background-color: $grey-200;*/
+    background-color: $grey-300;
+}
+
+/*.col-1, .cols-7, .col-7, .col-8, cols-8, .col-lg-8, cols-6, .col-lg-6 {
+    border-right: 1px solid gray;
+}*/
+
+.moderator-notify-user-comment,
+.moderator-email-notify-user-comment {
+    border: 1px solid greenyellow;
+    padding: 20px;
+    font-style: italic;
+}
+
+.moderator-notify-user-add-note {
+    border-top: 1px solid grey;
+    margin: 13px 0;
+}
+
+.header-view-deleted {
+    border-bottom: 2px solid #f91717;
+}
+.community-admin-header-title {
+    color: $community-primary;
+}
+
+.moderator-notify-user, .moderator-email {
+    margin: 7px;
+}
+
+.modal-title, .modal-body {
+    color: $community-primary;
+}
+
+.community-admin-deleted-mod-name {
+    color: gray;
+    font-size: small;
+}
+
+.center-header {
+    text-align: center;
+}
+
+@media (max-width: 1499.98px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+
+
+
+.btn {
+    &.btn-primary {
+        color: $white;
+        background-color: $community-primary;
+        border-color: $community-primary;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: $white;
+            background-color: mix($black, $community-primary, $btn-hover-bg-shade-amount);
+            border-color: mix($black, $community-primary, $btn-hover-border-shade-amount);
+        }
+    }
+
+    &.btn-secondary {
+        color: $black;
+        background-color: $community-secondary;
+        border-color: $community-secondary;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: $black;
+            background-color: mix($white, $community-secondary, $btn-hover-bg-tint-amount);
+            border-color: mix($white, $community-secondary, $btn-hover-border-tint-amount);
+        }
+    }
+
+    &.btn-grey {
+        color: $black;
+        background-color: $grey-300;
+        border-color: $grey-300;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: $black;
+            background-color: mix($black, $grey-300, $btn-hover-bg-shade-amount);
+            border-color: mix($black, $grey-300, $btn-hover-border-shade-amount);
+        }
+    }
+
+    &.btn-outline-primary {
+        color: $community-primary;
+        border-color: $community-primary;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: $white;
+            background-color: $community-primary;
+            border-color: $community-primary;
+        }
+    }
+
+    &.btn-outline-secondary {
+        color: $community-secondary;
+        border-color: $community-secondary;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: $white;
+            background-color: $community-secondary;
+            border-color: $community-secondary;
+        }
+    }
+
+    &.btn-outline-grey {
+        color: $grey-300;
+        border-color: $grey-300;
+
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: $black;
+            background-color: $grey-300;
+            border-color: $grey-300;
+        }
+    }
+}
+
+@import "blockUI";

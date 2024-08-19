@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CRM_TEST" Class="CrmSprocsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NFUSQLPROD01;initial catalog=CRM_LIVE;Persist Security Info=True;User ID=cmsadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CRM_TESTConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.CUST_NFU_MOB_APP_MEETREG_GetMeetingAttendees" Method="CUST_NFU_MOB_APP_MEETREG_GetMeetingAttendees">
+    <Parameter Name="CUST_NFU_MARKETING_Code" Parameter="cUST_NFU_MARKETING_Code" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="CUST_NFU_MOB_APP_MEETREG_GetMeetingAttendeesResult">
+      <Column Name="CONTACT_Id" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="NoAttending" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AttendeeName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TypeofBusiness" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DietaryRequirements" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AttendedMeeting" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Removed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CUST_NFU_CONTACT_MARKETING_INFORMATION_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UniqueId" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CUST_NFU_NETZERO_Map_Data" Method="CUST_NFU_NETZERO_Map_Data">
+    <ElementType Name="CUST_NFU_NETZERO_Map_DataResult">
+      <Column Name="CONTACT_Id" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CUST_NFU_MARKETING_CATEGORY_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CUST_NFU_MARKETING_CATEGORY_Desc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUST_NFU_MARKETING_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CUST_NFU_MARKETING_Desc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CUST_NFU_CONTACT_MARKETING_INFORMATION_Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ADDRESS_Longitude" Type="System.Decimal" DbType="Decimal(9,6) NOT NULL" CanBeNull="false" />
+      <Column Name="ADDRESS_Latitude" Type="System.Decimal" DbType="Decimal(9,6) NOT NULL" CanBeNull="false" />
+      <Column Name="County" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NFU_WEB_Contact_GUID_Lookup" Method="NFU_WEB_Contact_GUID_Lookup">
+    <Parameter Name="UID" Parameter="uID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="NFU_WEB_Contact_GUID_LookupResult">
+      <Column Name="CONTACT_Id" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CUST_NFU_Get_Sug_Board" Method="CUST_NFU_Get_Sug_Board">
+    <Parameter Name="ADDRESS_PostCode" Parameter="aDDRESS_PostCode" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="CUST_NFU_Get_Sug_BoardResult">
+      <Column Name="CONTACT_Id" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CONTACT_PostName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PrfEmail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PrfTel" Type="System.String" DbType="NVarChar(306)" CanBeNull="true" />
+      <Column Name="PrfMobile" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

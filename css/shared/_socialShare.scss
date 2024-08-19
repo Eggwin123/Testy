@@ -1,0 +1,40 @@
+﻿#socialShare {
+    position: fixed;
+    bottom: 55%;
+    right: 0;
+    z-index: 1030;
+
+    @include media-breakpoint-up(lg) {
+        left: 0;
+        right: unset;
+        bottom: 30%;
+    }
+
+    .shareBtn[role=button],
+    .shareBtn[role=button]:hover,
+    .shareBtn[role=button]:active,
+    .shareBtn[role=button]:visited {
+        color: white;
+        background-color: var(--bs-gray, slategray);
+        border: none;
+    }
+
+    .shareBtn[role=button] {
+        &.facebook {
+            background-color: var(--bs-facebook, royalblue);
+        }
+
+        &.twitter {
+            background-color: var(--bs-twitter, black);
+        }
+
+        &.whatsapp {
+            background-color: var(--bs-whatsapp, limegreen);
+        }
+
+        &:hover,
+        &:active {
+            background-color: var(--bs-gray-dark, darkslategray);
+        }
+    }
+}

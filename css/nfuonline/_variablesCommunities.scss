@@ -1,0 +1,177 @@
+﻿@import "../shared/colours";
+@import "../shared/communitiesColours";
+
+
+
+
+// Colour system
+$gray-100: $community-gray-100;
+$gray-200: $community-gray-200;
+$gray-300: $community-gray-300;
+$gray-400: $community-gray-400;
+$gray-500: $community-gray-500;
+$gray-600: $community-gray-600;
+$gray-700: $community-gray-700;
+$gray-800: $community-gray-800;
+$gray-900: $community-gray-900;
+$primary:  $gray-600;
+//$secondary: $bayleaf;
+
+
+// Options
+$enable-cssgrid: true;
+
+
+// Spacing
+$spacer: 1rem;
+
+
+// Body
+$body-color: $gray-900;
+
+
+// Components
+$custom-border-width: .25rem;
+$custom-border-radius: 0;
+$coming-soon-ribbon-bg: $gray-600;
+
+
+
+
+
+
+
+
+// Tables
+//$table-master-color: $secondary;
+//$table-cell-vertical-align: middle;
+//$table-striped-bg-factor: .1;
+//$table-striped-bg: rgba($table-master-color, $table-striped-bg-factor);
+//$table-active-bg-factor: .2;
+//$table-active-bg: rgba($table-master-color, $table-active-bg-factor);
+//$table-hover-bg-factor: .3;
+//$table-hover-bg: rgba($table-master-color, $table-hover-bg-factor);
+//$table-border-width: .125rem;
+//$table-border-color: $table-master-color;
+//$table-bg-scale: -85%;
+// Dropdowns
+//$dropdown-link-color: $gray-600;
+// Buttons
+//$btn-hover-bg-shade-amount: 15%;
+//$btn-hover-bg-tint-amount: 20%;
+//$btn-hover-border-shade-amount: 20%;
+//$btn-hover-border-tint-amount: 15%;
+//$btn-active-bg-shade-amount: 20%;
+//$btn-active-bg-tint-amount: 25%;
+//$btn-active-border-shade-amount: 25%;
+//$btn-active-border-tint-amount: 15%;
+// Accordion
+//$accordion-icon-width: 1.875rem;
+//$accordion-icon-color: $secondary;
+//$accordion-icon-active-color: $primary;
+//$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+//$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+// Popover-variables
+//$popover-max-width: 300px;
+//$popover-border-color: rgba($primary, .5);
+//$popover-header-color: $primary;
+//$popover-arrow-outer-color: fade-in($popover-border-color, .15);
+// Pagination
+//$pagination-color:                  $body-color;
+//$pagination-bg:                     $white;
+//$pagination-border-width:           0;
+//$pagination-border-radius:          0;
+//$pagination-focus-color:            $white;
+//$pagination-focus-bg:               $nfu-600;
+//$pagination-hover-color:            $white;
+//$pagination-hover-bg:               $nfu-600;
+//$pagination-active-color:           $white;
+//$pagination-active-bg:              $nfu-200;
+//$pagination-disabled-color:         $gray-400;
+//$pagination-disabled-bg:            $gray-100;
+//$pagination-border-radius-sm:       0;
+//$pagination-border-radius-lg:       0;
+// Tooltip
+//$tooltip-font-size:                 $font-size-sm !default;
+//$tooltip-max-width:                 200px !default;
+//$tooltip-color:                     $white !default;
+//$tooltip-bg:                        $black !default;
+//$tooltip-border-radius:             .25rem;
+//$tooltip-opacity:                   .9 !default;
+//$tooltip-padding-y:                 1rem * .25 !default;
+//$tooltip-padding-x:                 1rem * .5 !default;
+//$tooltip-margin:                    0 !default;
+
+//$tooltip-arrow-width:               .8rem !default;
+//$tooltip-arrow-height:              .4rem !default;
+//$tooltip-arrow-color:               $tooltip-bg !default;
+
+// Forms
+$input-bg:                          $white;
+$input-border-color:                $gray-400;
+//$input-border-width:                $custom-border-width;
+//$input-border-radius:               $custom-border-radius;
+
+
+// Cards
+$card-spacer-y:                     $spacer;
+$card-spacer-x:                     $spacer * 1.5;
+$card-border-width:                 $custom-border-width;
+$card-border-color:                 $primary;
+$card-border-radius:                $custom-border-radius;
+$card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
+$card-cap-padding-x:                $card-spacer-x;
+$card-cap-bg:                       null;
+
+
+// Carousels
+$carousel-control-color:             $white;
+$carousel-control-opacity:           .6;
+$carousel-indicator-width:           40px;
+$carousel-indicator-height:          8px;
+$carousel-indicator-hit-area-height: 8px;
+$carousel-indicator-spacer:          4px;
+$carousel-indicator-opacity:         .6;
+$carousel-control-icon-width:        2.5rem;
+$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z'/></svg>");
+$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z'/></svg>");
+
+
+
+
+
+
+
+
+
+
+
+
+
+//$custom-theme-colours: (
+//    "nfu":          $nfu-green,
+//    "bayleaf":      $bayleaf,
+//    "cymru":        $cymru-red,
+//    "sweetpink":    $sweetpink
+//);
+//$custom-social-colours: (
+//    "facebook":  $facebook,
+//    "youtube":   $youtube,
+//    "linkedin":  $linkedin,
+//    "twitter":   $twitter,
+//    "instagram": $instagram,
+//    "whatsapp":  $whatsapp
+//);
+//
+//$custom-table-variants: (
+//    "nfu":          shift-color($nfu-green, $table-bg-scale),
+//    "bayleaf":      shift-color($bayleaf, $table-bg-scale),
+//    "cymru":        shift-color($cymru-red, $table-bg-scale),
+//    "sweetpink":    shift-color($sweetpink, $table-bg-scale)
+//);
+
+//$colors: map-remove($colors, "indigo", "purple", "pink", "teal", "cyan");
+//$colors: map-merge($custom-theme-colours, $colors);
+//$colors: map-merge($custom-social-colours, $colors);
+//$theme-colors: map-merge($custom-theme-colours, $theme-colors);
+//$table-variants: map-merge($custom-table-variants, $table-variants);

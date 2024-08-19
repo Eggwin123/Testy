@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UmbracoCms" Class="DatabaseProceduresDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NFUSQLDEV01;Initial Catalog=UmbracoCms;User ID=cmsadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="UmbracoDbDSN" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.CUST_NFU_WEB_UMBRACO_MediaSearch" Method="CUST_NFU_WEB_UMBRACO_MediaSearch">
+    <Parameter Name="SearchTerm" Parameter="searchTerm" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="CUST_NFU_WEB_UMBRACO_MediaSearchResult">
+      <Column Name="createDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="path" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

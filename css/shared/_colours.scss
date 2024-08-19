@@ -1,0 +1,154 @@
+﻿// Core Colors
+$nfu-green:   #006938;
+$cymru-red:   #ec1c24;
+$sky-blue:    #2fabe2;
+$crop-yellow: #ffff00;
+$crop-green:  #8bc53f;
+$grass-green: #009144;
+$earth-brown: #737245;
+$cs-green:    #008d6c;
+$cs-teal:     #007d85;
+$cs-yellow:   #ffcc00;
+
+// NFU Green Palette
+$nfu-50: adjust-hue(desaturate(lighten($nfu-green, 75%), 90%), -14);
+$nfu-100: adjust-hue(desaturate(lighten($nfu-green, 60%), 80%), -12);
+$nfu-200: adjust-hue(desaturate(lighten($nfu-green, 50%), 70%), -10);
+$nfu-300: adjust-hue(desaturate(lighten($nfu-green, 40%), 60%), -8); //bayleaf
+$nfu-400: adjust-hue(desaturate(lighten($nfu-green, 30%), 50%), -6);
+$nfu-500: adjust-hue(desaturate(lighten($nfu-green, 20%), 40%), -4);
+$nfu-600: adjust-hue(desaturate(lighten($nfu-green, 10%), 20%), -2);
+$nfu-700: $nfu-green;
+$nfu-800: adjust-hue(darken($nfu-green, 5%), 2);
+$nfu-900: adjust-hue(darken($nfu-green, 10%), 4);
+
+// NFU Cymru Red Palette
+$cymru-50:  adjust-hue(desaturate(lighten($cymru-red, 40%), 40%), 10);
+$cymru-100: adjust-hue(desaturate(lighten($cymru-red, 30%), 10%), 8);
+$cymru-200: adjust-hue(desaturate(lighten($cymru-red, 22.5%), 7.5%), 6); //sweetpink
+$cymru-300: adjust-hue(desaturate(lighten($cymru-red, 15%), 5%), 4);
+$cymru-400: adjust-hue(desaturate(lighten($cymru-red, 7.5%), 2.5%), 2);
+$cymru-500: $cymru-red;
+$cymru-600: adjust-hue(saturate(darken($cymru-red, 7.5%), 2.5%), -2);
+$cymru-700: adjust-hue(saturate(darken($cymru-red, 15%), 5%), -4);
+$cymru-800: adjust-hue(saturate(darken($cymru-red, 22.5%), 7.5%), -6);
+$cymru-900: adjust-hue(saturate(darken($cymru-red, 30%), 10%), -8);
+
+$grey-light: #eeeeee;
+$grey-dark:  #333333;
+$white-tint: rgba(192, 255, 255, .75);
+$black-tint: rgba(0, 0, 0, .75);
+
+// Countryside Green Palette
+$cs-50: adjust-hue(desaturate(lighten($cs-green, 40%), 40%), 10);
+$cs-100: adjust-hue(desaturate(lighten($cs-green, 30%), 10%), 8);
+$cs-200: adjust-hue(desaturate(lighten($cs-green, 22.5%), 7.5%), 6);
+$cs-300: adjust-hue(desaturate(lighten($cs-green, 15%), 5%), 4);
+$cs-400: adjust-hue(desaturate(lighten($cs-green, 7.5%), 2.5%), 2);
+$cs-500: $cs-green;
+$cs-600: adjust-hue(saturate(darken($cs-green, 7.5%), 2.5%), -2);
+$cs-700: adjust-hue(saturate(darken($cs-green, 15%), 5%), -4);
+$cs-800: adjust-hue(saturate(darken($cs-green, 22.5%), 7.5%), -6);
+$cs-900: adjust-hue(saturate(darken($cs-green, 30%), 10%), -8);
+
+// Countryside Teal Palette
+$cs-teal-50: adjust-hue(desaturate(lighten($cs-teal, 40%), 40%), 10);
+$cs-teal-100: adjust-hue(desaturate(lighten($cs-teal, 30%), 10%), 8);
+$cs-teal-200: adjust-hue(desaturate(lighten($cs-teal, 22.5%), 7.5%), 6);
+$cs-teal-300: adjust-hue(desaturate(lighten($cs-teal, 15%), 5%), 4);
+$cs-teal-400: adjust-hue(desaturate(lighten($cs-teal, 7.5%), 2.5%), 2);
+$cs-teal-500: $cs-teal;
+$cs-teal-600: adjust-hue(saturate(darken($cs-teal, 7.5%), 2.5%), -2);
+$cs-teal-700: adjust-hue(saturate(darken($cs-teal, 15%), 5%), -4);
+$cs-teal-800: adjust-hue(saturate(darken($cs-teal, 22.5%), 7.5%), -6);
+$cs-teal-900: adjust-hue(saturate(darken($cs-teal, 30%), 10%), -8);
+
+// Misc Countryside Colours
+$green-50: #cfe5e0;
+$green-pale: #adf7e6;
+$green-light: #008d6c;
+$green-dark: #005440;
+$green-tint: rgba($green-dark, .75);
+
+$cs-teal-tint: rgba(0, 77, 82, 0.5);
+
+$cs-blue-light: #457db7;
+$cs-blue-dark: #073e78;
+$cs-blue-tint: rgba($cs-blue-dark, .75);
+
+$cs-red-light: #9f0a00;
+$cs-red-dark: #520500;
+$cs-red-tint: rgba($cs-red-dark, .75);
+
+// Neutral Colours
+$white:     hsl(0, 100%, 100%); //#ffffff
+$black:     hsl(0, 0%, 0%);     //#000000
+
+$nfu-gray-100: hsl(180, 12%, 94%); //#eef2f2
+$nfu-gray-200: hsl(180, 12%, 88%); //#dde4e4
+$nfu-gray-300: hsl(180, 12%, 82%); //#ccd7d7
+$nfu-gray-400: hsl(180, 12%, 76%); //#bac9c9
+$nfu-gray-500: hsl(180, 12%, 68%); //#adbdbd
+$nfu-gray-600: hsl(180, 12%, 44%); //#637e7e
+$nfu-gray-700: hsl(180, 12%, 28%); //#3f5050
+$nfu-gray-800: hsl(180, 12%, 20%); //#2d3939
+$nfu-gray-900: hsl(180, 12%, 14%); //#1f2828
+
+$cymru-gray-100: hsl(285, 12%, 94%); //#f1eef2
+$cymru-gray-200: hsl(285, 12%, 88%); //#e2dde4
+$cymru-gray-300: hsl(285, 12%, 82%); //#d4ccd7
+$cymru-gray-400: hsl(285, 12%, 76%); //#c5bac9
+$cymru-gray-500: hsl(285, 12%, 68%); //#b2a4b7
+$cymru-gray-600: hsl(285, 12%, 44%); //#77637e
+$cymru-gray-700: hsl(285, 12%, 28%); //#4c3f50
+$cymru-gray-800: hsl(285, 12%, 20%); //#362d39
+$cymru-gray-900: hsl(285, 12%, 14%); //#261f28
+
+// Social Colours
+$facebook:  #0047aa;
+$youtube:   #e25d4a;
+$linkedin:  #0258bf;
+$twitter:   #000000;
+$instagram: #833ab4;
+$whatsapp:  #25d366;
+
+// Named Colours
+$bayleaf: $nfu-300;
+$sweetpink: $cymru-200;
+$orange: hsl(30, 90%, 55%); //f48c25
+$pineneedle: $cs-teal-600;
+
+$bpoa: #d66e45;
+$syf-teal: #0fa98a;
+$highland-green: #799359;
+$eu-blue: #003399;
+$eu-gold: #ffcc00;
+$cadwaladr: #d21034;
+$pride1: #e40303;
+$pride2: #ff8c00;
+$pride3: #ffed00;
+$pride4: #008026;
+$pride5: #004dff;
+$pride6: #750787;
+
+// Membership
+$membership: $nfu-700;
+$membership-lt: mix(white, $nfu-700, 87.5% );
+$membership-accent: $nfu-300;
+$membership-cy: $cymru-500;
+$membership-cy-lt: mix(white, $cymru-500, 87.5% );
+$membership-cy-accent: $cymru-200;
+$membership-fg: $nfu-700;
+$membership-partner: darken($crop-yellow, 5%);
+$membership-family: $crop-green;
+$membership-retired: $grass-green;
+$membership-pro: $earth-brown;
+$membership-probiz: desaturate(lighten($membership-pro, 20%), 10%);
+$membership-ass: $sky-blue;
+$membership-syf: $orange;
+
+// Gradients
+$nfuSpectrum:       linear-gradient(to right, $earth-brown 20%, $grass-green 20%, $grass-green 40%, $crop-green 40%, $crop-green 60%, $crop-yellow 60%, $crop-yellow 80%, $sky-blue 80%);
+$dark-gradient:     linear-gradient(to right, $black-tint 0%, rgba(0, 0, 0, 0) 75%);
+$darker-gradient:   linear-gradient(to right, $black-tint 0%, rgba(0, 0, 0, 0) 100%);
+$cs-teal-gradient:  linear-gradient(to bottom, $cs-teal-500, $cs-teal-700);

@@ -1,0 +1,228 @@
+﻿body.loading * {
+    cursor: wait;
+}
+
+.details p {
+    margin: 0;
+}
+
+.details hr {
+    margin: 0.5em 0;
+}
+
+p.title {
+    font-weight: bold;
+    display: inline;
+}
+
+#sidebar .nav-item a:hover {
+    cursor: pointer;
+}
+
+.action {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .nav > li {
+        border-right: 1px solid #e6e6e6;
+    }
+}
+
+.nav-link.account-area {
+    color: #218456;
+}
+
+select.description,
+input.description,
+input.communication,
+input.address {
+    background: none;
+    border: 0;
+    border-bottom: 1px dotted #333;
+    box-shadow: none;
+    color: #000;
+}
+
+input.description,
+input.communication {
+    width: 70%;
+}
+
+select.description {
+    width: 60%;
+}
+
+input.address {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+select.description,
+input.description {
+    float: right;
+    text-align: right;
+}
+
+    select.description[disabled],
+    input.description[disabled],
+    input.address[disabled] {
+        border: 0;
+        width: auto;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 0.01px;
+        text-overflow: '';
+    }
+
+input.communication[disabled] {
+    border: 0;
+}
+
+input[type='date'].description[disabled] {
+    margin-right: -42px;
+}
+
+.btn .action {
+    background-color: #f5f5f5;
+}
+
+.btn-transparent {
+    background: rgba(0, 0, 0, 0);
+    padding: 0.75em;
+    border: 0;
+}
+
+.pending {
+    background: #eee;
+}
+
+.dont-break-out {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.commRow:not(:last-of-type),
+.addressRow:not(:last-of-type) {
+    border-bottom: 1px dotted #eee;
+}
+
+label.communication-label.primary::before,
+.primaryAddressLabel.active::before {
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 900;
+    content: '\f559';
+    color: #006438;
+}
+
+label.communication-label {
+    padding-left: 1.5em;
+    width: 100%;
+}
+
+    label.communication-label.primary {
+        padding-left: 0;
+    }
+
+        label.communication-label.primary::before {
+            margin-right: 0.75em;
+        }
+
+.primaryAddressLabel.inactive {
+    padding-left: 1em;
+}
+
+.address-label {
+    display: inline;
+}
+
+    .address-label.noValue input {
+        display: none;
+    }
+
+@@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+@@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+#overview hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.rotateRight {
+    transform: rotate(225deg);
+    transition: 300ms ease all;
+}
+
+.rotateLeft {
+    transform: rotate(0);
+    transition: 300ms ease all;
+}
+
+.fa-med {
+    font-size: 1.25em;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    color: #fff;
+}
+
+.card-header {
+    padding: 0.5em;
+    border-radius: 0.25rem 0.25rem 0 0;
+    font-size: 1.25em;
+}
+
+    .card-header .btn-link {
+        padding: 1em !important;
+        text-align: left;
+        width: 100%;
+    }
+
+        .card-header .btn-link h5 {
+            display: inline;
+            color: #fff;
+            padding-right: 2em;
+            white-space: normal;
+        }
+
+#sidebar a.disabled {
+    opacity: 0.25;
+}
+
+#sidebar a.loading {
+    pointer-events: none;
+}

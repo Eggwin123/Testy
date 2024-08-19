@@ -1,0 +1,217 @@
+﻿// Fonts
+$source: 'Source Sans Pro';
+$poppins: 'Poppins';
+
+// Brand Colours
+$tb-primary:   hsl(082,066,040); //#78a923
+$tb-secondary: hsl(148,100,026); //#00853e
+$tb-tertiary:  hsl(062,100,042); //#cfd600
+
+$colour-links:    hsl(215.5, 58%, 58%); //5588d2
+$colour-offWhite: hsl(156, 20%, 95%); //#f1f2ef
+
+$colour-lightShades: hsl(156, 30%, 70%); //#9cc9b7
+$colour-lightAccent: hsl(25, 62%, 68%); //#e0a57b
+$colour-mainBrand:   hsl(144, 22%, 52%); //#6aa07f
+$colour-darkAccent:  hsl(335, 32%, 42%); //#8d4965
+$colour-darkShades:  hsl(156, 30%, 40%); //#47856c
+
+// Neutral Colours
+$white: hsl(0, 100%, 100%); //#ffffff
+$black: hsl(0, 0%, 0%); //#000000
+
+// Bootstrap Colours
+$gray-100: #f9fafa;
+$gray-200: #e9eceb;
+$gray-300: #e1e5e3;
+$gray-400: #d0d7d4;
+$gray-500: #acb9b4;
+$gray-600: #6a7c75;
+$gray-700: #4b5853;
+$gray-800: #343d39;
+$gray-900: #232927;
+
+// Social Colours
+$linkedin: #0077b5;
+$facebook: #3b5998;
+$twitter: #000000;
+$pinterest: #bd081c;
+$whatsapp: #25d366;
+$email: #bc1515;
+$linkedin-blue: #0077b5;
+$facebook-blue: #3b5998;
+$twitter-black: #000000;
+$pinterest-red: #bd081c;
+$whatsapp-green: #25d366;
+$email-red: #bc1515;
+
+// Document Colours
+$file-pdf: #ffe5e5;
+$file-word: #e5f7ff;
+$file-image: #fff7e5;
+
+// Tinted Colours
+$alpha-tb-black: change-color($black, $alpha: .4);
+$alpha-tb-white: change-color($white, $alpha: .4);
+
+// Logo Ratios
+$logo-ratio: 250/250;
+$logoLine-ratio: 866/140;
+$nfulogo-ratio: 872/240;
+$nfulogostrap-ratio: 2350/260;
+
+
+
+
+// Bootstrap
+
+    // Prefix
+    $prefix: bs-;
+
+    // Body
+    $body-color: $gray-800;
+
+    // Links
+    $link-color: $colour-links;
+    $link-decoration: none;
+    $link-shade-percentage: 15%;
+    $link-hover-color: shift-color($link-color, $link-shade-percentage);
+    //$link-hover-color: darken($link-color, 15%);
+    $link-hover-decoration: underline;
+
+    // Grid breakpoints
+    $grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1366px,
+        xxl: 1600px
+    );
+
+    // Grid containers
+    $container-max-widths: (
+        sm: 540px,
+        md: 740px,
+        lg: 980px,
+        xl: 1160px
+    );
+
+    // Components
+    $component-active-color:    $white;
+    $component-active-bg:       $colour-lightShades;
+
+    $aspect-ratios: (
+        "1x1": 100%,
+        "4x3": calc(3 / 4 * 100%),
+        "16x9": calc(9 / 16 * 100%),
+        "21x9": calc(9 / 21 * 100%),
+        "a-portrait": calc(420 / 297 * 100%),
+        "a-landscape": calc(297 / 420 * 100%)
+    );
+
+    // Typography
+    $font-family-sans-serif: $source, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    $font-family-base: var(--#{$prefix}font-sans-serif);
+
+    $font-base: 1em;
+    $font-scale: 1.05;
+    $font-jump: 1.25;
+
+    $font-weight-light: 200;
+    $font-weight-normal: 300;
+    $font-weight-bold: 600;
+    $font-weight-display: 700;
+
+    $font-weight-base: $font-weight-normal;
+
+    $line-height-base: 1.5;
+    $line-height-sm:   1.15;
+    $line-height-lg:   $line-height-base;
+
+    $h6-font-size: $font-base * $font-jump;
+    $h5-font-size: $h6-font-size * $font-scale;
+    $h4-font-size: $h5-font-size * $font-scale;
+    $h3-font-size: $h4-font-size * $font-jump;
+    $h2-font-size: $h3-font-size * $font-scale;
+    $h1-font-size: $h2-font-size * $font-scale;
+
+    $font-sizes: (
+      1: $h1-font-size,
+      2: $h2-font-size,
+      3: $h3-font-size,
+      4: $h4-font-size,
+      5: $h5-font-size,
+      6: $h6-font-size
+    );
+
+    $headings-font-family: $poppins, $font-family-sans-serif;
+    $headings-font-weight: $font-weight-display;
+    $headings-line-height: $line-height-sm;
+
+    $display4-size: $h1-font-size * $font-jump;
+    $display3-size: $display4-size * $font-scale;
+    $display2-size: $display3-size * $font-scale;
+    $display1-size: $display2-size * $font-scale;
+
+    $display-font-sizes: (
+        1: $display1-size,
+        2: $display2-size,
+        3: $display3-size,
+        4: $display4-size
+    );
+
+    $display-font-family: $headings-font-family;
+    $display-font-weight: $font-weight-display;
+
+    $lead-font-size: $font-base * $font-jump;
+    $lead-font-weight: 400;
+
+    $small-font-size: .8em;
+
+    // Tables
+    //$table-bg-scale: -85%;
+
+
+    // Themes
+    $custom-theme-colours: (
+        "main-brand": $colour-mainBrand,
+        "light-shades": $colour-lightShades,
+        "dark-shades": $colour-darkShades,
+        "light-accent": $colour-lightAccent,
+        "dark-accent": $colour-darkAccent
+    );
+
+    //$custom-table-variants: (
+    //    "main-brand": shift-color($colour-mainBrand, $table-bg-scale),
+    //    "light-shades": shift-color($colour-lightShades, $table-bg-scale),
+    //    "dark-shades": shift-color($colour-darkShades, $table-bg-scale),
+    //    "light-accent": shift-color($colour-lightAccent, $table-bg-scale),
+    //    "dark-accent": shift-color($colour-darkAccent, $table-bg-scale)
+    //);
+
+    // Accordions
+    $accordion-padding-y:                   1.25rem;
+    $accordion-padding-x:                   1.25rem;
+
+    $accordion-button-padding-y:            1rem;
+    $accordion-button-padding-x:            2rem;
+    $accordion-button-color:                $colour-darkShades;
+    $accordion-button-bg:                   $colour-offWhite;
+    $accordion-button-active-bg:            $colour-lightShades;
+    $accordion-button-active-color:         $white;
+
+    $accordion-icon-width:                  2rem;
+    $accordion-icon-color:                  $accordion-button-color;
+    $accordion-icon-active-color:           $accordion-button-active-color;
+
+    $accordion-button-icon:                 url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+    $accordion-button-active-icon:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path d='M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+
+    // Breadcrumbs
+    $breadcrumb-font-size:              $small-font-size;
+    $breadcrumb-item-padding-x:         .25rem;
+    //$breadcrumb-margin-bottom:          1rem !default;
+    $breadcrumb-divider-color:          $colour-darkShades;
+    $breadcrumb-active-color:           $colour-darkShades;
+    $breadcrumb-divider:                url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$breadcrumb-divider-color}' width='16' height='16'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");

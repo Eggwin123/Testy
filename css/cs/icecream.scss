@@ -1,0 +1,71 @@
+﻿@import '_variables';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:wght@200;400&display=swap');
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+$primary: $blue-light;
+$primary-tint: $blue-light;
+$secondary: $red-light;
+$secondary-tint: $red-light;
+
+.field-validation-error {
+    display: none;
+}
+
+.header, nav, footer {
+    display: none!important;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $primary;
+}
+
+html {
+    background-color: $white;
+}
+
+.primary-hover:hover,
+.primary-hover:hover * {
+    background-color:$primary;
+    color:$white !important;
+}
+
+.secondary-hover:hover,
+.secondary-hover:hover * {
+    background-color: $secondary;
+    color: $white !important;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+input.location::-webkit-input-placeholder {
+    color: $blue-light !important;
+    font-style: italic;
+}
+
+input.location::-moz-placeholder {
+    color: $blue-light !important;
+    font-style: italic;
+}
+
+input.location::placeholder {
+    color: $blue-light !important;
+    font-style: italic;
+}

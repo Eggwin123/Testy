@@ -1,0 +1,118 @@
+﻿.electricitybuyinggroupapplication {
+    thead,
+    tbody,
+    tfoot,
+    tr,
+    td,
+    th {
+        border-color: inherit;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    .datepicker-dropdown {
+        width: auto !important;
+        left: 770px;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+
+    .bg-info {
+        background-color: desaturate(lighten($sky-blue, 35%), 10%) !important;
+    }
+}
+
+.electricity-buying-group-form {
+    .meter,
+    h2,
+    .h2 {
+        border-top: 1px solid $gray-400;
+    }
+
+    .meter {
+        padding: 1em 0;
+    }
+
+    .meter-table {
+        margin-right: 1em;
+        padding-right: 1em;
+        border-width: 1px !important;
+
+        td {
+            text-align: center;
+        }
+
+        input {
+            border: 0;
+            font-size: .9rem;
+            padding: 0;
+            text-align: center;
+            width: 3em;
+            max-width: 400px;
+        }
+
+        .wide input {
+            width: 6em;
+        }
+
+        .big {
+            font-size: 3rem;
+            font-weight: 600;
+            padding: 0.4rem;
+        }
+    }
+
+    .input-validation-error {
+        border: 1px solid $cymru-red;
+        background-color: $sweetpink;
+    }
+
+    .remove-meter-btn {
+        margin-top: 1.8em;
+    }
+
+    input {
+        max-width: 400px;
+    }
+
+    h2,
+    .h2 {
+        margin: 1.2em 0 0.7em;
+        padding-bottom: 0.2em;
+    }
+
+    .form-group {
+        label {
+            font-weight: normal;
+
+            &.required {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.electricity-buying-group-meter-details {
+    margin-bottom: 1em;
+    width: 100%;
+
+    td {
+        padding: 0.5em;
+        text-align: center;
+        width: 10%;
+
+        &.s {
+            font-size: 2em;
+            font-weight: 600;
+        }
+    }
+}
+
+.electricity-buying-group-meter-extra {
+    width: 100%;
+
+    th,
+    td {
+        padding: 0.5em;
+    }
+}

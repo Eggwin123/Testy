@@ -1,0 +1,203 @@
+﻿@import "../shared/colours";
+
+$primary-font: 'Playfair Display', serif;
+$secondary-font: 'Maven Pro', sans-serif;
+$rounded-top: 5px 5px 0 0;
+
+//custom variables
+// Logos
+$nfulogo-ratio: 640/84;
+$nfulogostrap-ratio: 640/84;
+// Membership
+$membershipTabsHeight: 8vw;
+$membershipTabsHeightSm: 1em;
+$membershipTabsHeightMd: 1.5em;
+$membershipTabsHeightLg: 2.25em;
+$membershipTabsHeightXl: 3em;
+// Colour system
+$gray-100: $nfu-gray-100;
+$gray-200: $nfu-gray-200;
+$gray-300: $nfu-gray-300;
+$gray-400: $nfu-gray-400;
+$gray-500: $nfu-gray-500;
+$gray-600: $nfu-gray-600;
+$gray-700: $nfu-gray-700;
+$gray-800: $nfu-gray-800;
+$gray-900: $nfu-gray-900;
+$primary: $cs-600;
+$secondary: $cs-400;
+$info: $sky-blue;
+$success: $grass-green;
+$orange: $orange;
+$gray: $gray-600;
+$gray-dark: $gray-800;
+$light: $gray-100;
+$dark: $gray-dark;
+
+$blue-light: #457db7;
+$blue-dark: #073e78;
+$blue-tint: rgba(7, 62, 120, 0.75);
+
+$red-light: #9f0a00;
+$red-dark: #520500;
+$red-tint: rgba(82, 5, 0, 0.75);
+$yellow: #ffcc00;
+// Body
+$body-color: $gray-800;
+// Links
+$link-hover-decoration: none;
+// Paragraphs
+$paragraph-margin-bottom: .75rem;
+// Grid breakpoints
+$grid-breakpoints: (
+    xs: 0px,
+    sm: 576px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1366px,
+    xxl: 1600px
+);
+// Grid containers
+$container-max-widths: (
+    sm: 540px,
+    md: 740px,
+    lg: 1000px,
+    xl: 1260px
+);
+// Grid columns
+$grid-gutter-width: 2rem;
+// Components
+$aspect-ratios: (
+    "1x1": 100%,
+    "4x3": calc(3 / 4 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+    "21x9": calc(9 / 21 * 100%),
+    "a-portrait": calc(420 / 297 * 102.5%),
+    "a-landscape": calc(297 / 420 * 102.5%),
+    // ads iframe has an 8px body margin but the ads are 720 x 150px
+    "adverts-rotator": calc((150 + 16) / (720 + 16) * 100%)
+);
+// Typography
+$font-base: 1em;
+$font-tags: 1.3rem;
+$header-size-base: 1em;
+$header-size-scale: 1.15;
+$font-size-sm: $font-base * .8;
+$font-weight-bold: 600;
+$font-weight-bolder: $font-weight-bold;
+$line-height-base: 1.6;
+$line-height-sm: 1.15;
+$line-height-md: 1.3;
+$line-height-lg: $line-height-base;
+$h6-font-size: $header-size-base * $header-size-scale;
+$h5-font-size: $h6-font-size * $header-size-scale;
+$h4-font-size: $h5-font-size * $header-size-scale;
+$h3-font-size: $h4-font-size * $header-size-scale;
+$h2-font-size: $h3-font-size * $header-size-scale;
+$h1-font-size: $h2-font-size * $header-size-scale;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: $line-height-sm;
+$lead-font-weight: $font-weight-bold;
+$small-font-size: $font-size-sm;
+$text-muted: $gray-500;
+// Tables
+$table-master-color: $secondary;
+$table-cell-vertical-align: middle;
+$table-striped-bg-factor: .1;
+$table-striped-bg: rgba($table-master-color, $table-striped-bg-factor);
+$table-active-bg-factor: .2;
+$table-active-bg: rgba($table-master-color, $table-active-bg-factor);
+$table-hover-bg-factor: .3;
+$table-hover-bg: rgba($table-master-color, $table-hover-bg-factor);
+$table-border-width: .125rem;
+$table-border-color: $table-master-color;
+$table-bg-scale: -85%;
+// Dropdowns
+$dropdown-link-color: $gray-600;
+// Buttons
+$btn-hover-bg-shade-amount: 15%;
+$btn-hover-bg-tint-amount: 20%;
+$btn-hover-border-shade-amount: 20%;
+$btn-hover-border-tint-amount: 15%;
+$btn-active-bg-shade-amount: 20%;
+$btn-active-bg-tint-amount: 25%;
+$btn-active-border-shade-amount: 25%;
+$btn-active-border-tint-amount: 15%;
+// Accordion
+$accordion-icon-width: 1.875rem;
+$accordion-icon-color: $secondary;
+$accordion-icon-active-color: $primary;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+// Popover-variables
+$popover-max-width: 300px;
+$popover-border-color: rgba($primary, .5);
+$popover-header-color: $primary;
+$popover-arrow-outer-color: fade-in($popover-border-color, .15);
+
+// import functions and variables
+@import "../../lib/bootstrap/scss/functions";
+@import "../../lib/bootstrap/scss/variables";
+
+$custom-theme-colours: ( "cs": $cs-green, "teal": $cs-teal, "pineneedle": $pineneedle, "grey": $grey-dark, "bayleaf": $pineneedle );
+$custom-social-colours: ( "facebook": $facebook, "youtube": $youtube, "linkedin": $linkedin, "twitter": $twitter, "instagram": $instagram, "whatsapp": $whatsapp );
+
+$custom-table-variants: ( "cs": shift-color($cs-green, $table-bg-scale), "teal": shift-color($cs-teal, $table-bg-scale), "pineneedle": shift-color($pineneedle, $table-bg-scale));
+
+$colors: map-remove($colors, "indigo", "purple", "pink", "teal", "cyan");
+$colors: map-merge($custom-theme-colours, $colors);
+$colors: map-merge($custom-social-colours, $colors);
+$theme-colors: map-merge($custom-theme-colours, $theme-colors);
+$table-variants: map-merge($custom-table-variants, $table-variants);
+
+
+
+// import bootstrap to merge
+//@import "../../lib/bootstrap/scss/bootstrap";
+// Configuration
+@import "../../lib/bootstrap/scss/functions";
+@import "../../lib/bootstrap/scss/variables";
+@import "../../lib/bootstrap/scss/mixins";
+@import "../../lib/bootstrap/scss/utilities";
+// Layout & components
+@import "../../lib/bootstrap/scss/root";
+@import "../../lib/bootstrap/scss/reboot";
+@import "../../lib/bootstrap/scss/type";
+@import "../../lib/bootstrap/scss/images";
+@import "../../lib/bootstrap/scss/containers";
+@import "../../lib/bootstrap/scss/grid";
+@import "../../lib/bootstrap/scss/tables";
+@import "../../lib/bootstrap/scss/forms";
+@import "../../lib/bootstrap/scss/buttons";
+@import "../../lib/bootstrap/scss/transitions";
+@import "../../lib/bootstrap/scss/dropdown";
+@import "../../lib/bootstrap/scss/button-group";
+@import "../../lib/bootstrap/scss/nav";
+@import "../../lib/bootstrap/scss/navbar";
+@import "../../lib/bootstrap/scss/card";
+@import "../../lib/bootstrap/scss/accordion";
+@import "../../lib/bootstrap/scss/breadcrumb";
+@import "../../lib/bootstrap/scss/pagination";
+@import "../../lib/bootstrap/scss/badge";
+@import "../../lib/bootstrap/scss/alert";
+//@import "../../lib/bootstrap/scss/progress";
+@import "../../lib/bootstrap/scss/list-group";
+@import "../../lib/bootstrap/scss/close";
+//@import "../../lib/bootstrap/scss/toasts";
+@import "../../lib/bootstrap/scss/modal";
+@import "../../lib/bootstrap/scss/tooltip";
+@import "../../lib/bootstrap/scss/popover";
+@import "../../lib/bootstrap/scss/carousel";
+//@import "../../lib/bootstrap/scss/spinners";
+@import "../../lib/bootstrap/scss/offcanvas";
+@import "../../lib/bootstrap/scss/placeholders";
+// Helpers
+@import "../../lib/bootstrap/scss/helpers";
+// Utilities
+@import "../../lib/bootstrap/scss/utilities/api";
+
+
+
+
+// custom mixins
+@import "../shared/mixins";

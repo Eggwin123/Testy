@@ -1,0 +1,19 @@
+﻿.pressoffice {
+    @include media-breakpoint-down(lg) {
+        .umb-grid {
+
+            .card {
+                flex-direction: row;
+                align-items: center;
+
+                .card-img-top {
+                    width: 40%;
+                }
+
+                .card-body {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

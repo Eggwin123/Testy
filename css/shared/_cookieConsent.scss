@@ -1,0 +1,52 @@
+﻿.cc-grower {
+    z-index: 1040;
+
+    @media print {
+        display: none
+    }
+
+    * {
+        font-family: var(--bs-body-font-family);
+    }
+
+    .cc-window {
+        width: 100%;
+
+        &.cc-top {
+            position: absolute !important;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &.cc-floating {
+            max-width: unset;
+
+            .cc-message {
+                margin-bottom: 0;
+
+                @include media-breakpoint-up(lg) {
+                    flex: 1 0 auto;
+                }
+            }
+
+            .cc-compliance {
+                @include media-breakpoint-up(lg) {
+                    flex: unset;
+                }
+            }
+        }
+
+        .cc-compliance {
+            margin-left: 1em;
+        }
+
+        .cc-link {
+            text-decoration: underline;
+        }
+
+        .cc-btn {
+            white-space: nowrap;
+        }
+    }
+}

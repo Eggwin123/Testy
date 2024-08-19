@@ -1,0 +1,210 @@
+﻿@import "../shared/colours";
+
+
+
+
+// Brand Colours
+$cfe-blue:      $sky-blue;
+$cfe-blue-dk:   darken($cfe-blue, 15%);
+$cfe-blue-lt:   lighten($cfe-blue, 15%);
+$cfe-green:     $crop-green;
+$cfe-green-dk:  darken($cfe-green, 15%);
+$cfe-green-lt:  lighten($cfe-green, 15%);
+$cfe-brown:     #635746;
+$cfe-brown-dk:  darken($cfe-brown, 15%);
+$cfe-brown-lt:  lighten($cfe-brown, 15%);
+
+$soils:     $cfe-brown;
+$water:     $cfe-green;
+$air:       $cfe-blue;
+$wildlife:  $cfe-green;
+$climate:   $cfe-brown;
+
+// Bootstrap Colours
+$gray-100:  $nfu-gray-100;
+$gray-200:  $nfu-gray-200;
+$gray-300:  $nfu-gray-300;
+$gray-400:  $nfu-gray-400;
+$gray-500:  $nfu-gray-500;
+$gray-600:  $nfu-gray-600;
+$gray-700:  $nfu-gray-700;
+$gray-800:  $nfu-gray-800;
+$gray-900:  $nfu-gray-900;
+$primary:   $cfe-blue;
+$secondary: $cfe-green;
+$success:   $grass-green;
+$danger:    $cymru-red;
+$info:      $cfe-blue;
+$gray:      $gray-600;
+$gray-dark: $gray-800;
+$light:     $gray-100;
+$dark:      $gray-800;
+
+
+
+
+// Animations
+$animation-duration-sl: 1s;
+$animation-duration-md: 2s;
+$animation-duration-lg: 3s;
+$animation-iteration-count: infinite;
+$animation-timing-function: linear;
+$animation-name-spin: spin;
+
+//Icons
+$icon-color-dark: $light;
+$icon-color-light: $dark;
+
+// Logo Ratios
+$cfelogo-ratio: 792/300;
+$cfelogostrap-ratio: 914/460;
+
+
+
+
+// Bootstrap
+    // Body
+    $body-color: $gray-800;
+
+    // Grid breakpoints
+    $grid-breakpoints: (
+        xs: 0,
+        vs: 480px,
+        sm: 576px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1366px,
+        xxl: 1600px
+    );
+
+    // Grid containers
+    $container-max-widths: (
+        sm: 540px,
+        md: 740px,
+        lg: 1000px,
+        xl: 1260px
+    );
+
+    // Grid columns
+    $grid-gutter-width: 1.5rem;
+
+    // Components
+    $aspect-ratios: (
+        "1x1": 100%,
+        "4x3": calc(3 / 4 * 100%),
+        "16x9": calc(9 / 16 * 100%),
+        "21x9": calc(9 / 21 * 100%),
+        "a-portrait": calc(420 / 297 * 100%),
+        "a-landscape": calc(297 / 420 * 100%)
+    );
+    /*$component-active-color: $white;*/
+    /*$component-active-bg: $primary-dk;*/
+
+    // Typography
+    $font-family-sans-serif: Jost, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    $font-size-base: 1rem;
+    $font-size-sm: $font-size-base * .8;
+
+    $font-weight-light:     300;
+    $font-weight-normal:    400;
+    $font-weight-semibold:  500;
+    $font-weight-bold:      600;
+
+    $line-height-base: 1.6;
+    $line-height-sm: 1.125;
+    $line-height-md: 1.325;
+    $line-height-lg: $line-height-base;
+
+    $header-size-base: 1em;
+    $header-size-scale: 1.165;
+    $h6-font-size: $header-size-base * $header-size-scale;
+    $h5-font-size: $h6-font-size * $header-size-scale;
+    $h4-font-size: $h5-font-size * $header-size-scale;
+    $h3-font-size: $h4-font-size * $header-size-scale;
+    $h2-font-size: $h3-font-size * $header-size-scale;
+    $h1-font-size: $h2-font-size * $header-size-scale;
+
+    $headings-font-weight: $font-weight-semibold;
+    $headings-line-height: $line-height-sm;
+
+    $display-font-weight: $font-weight-light;
+
+    $lead-font-weight: $font-weight-semibold;
+    $small-font-size: $font-size-sm;
+
+    $text-muted: $gray-500;
+
+    // Links
+    $link-color: $cfe-blue;
+    $link-decoration: none;
+    $link-hover-decoration: underline;
+    $link-weight: $font-weight-semibold;
+
+    // Tables
+    /*$table-master-color: $secondary-lt;
+    $table-cell-vertical-align: middle;
+    $table-striped-bg-factor: .1;
+    $table-striped-bg: rgba($table-master-color, $table-striped-bg-factor);
+    $table-active-bg-factor: .2;
+    $table-active-bg: rgba($table-master-color, $table-active-bg-factor);
+    $table-hover-bg-factor: .3;
+    $table-hover-bg: rgba($table-master-color, $table-hover-bg-factor);
+    $table-border-width: .125rem;
+    $table-border-color: $table-master-color;*/
+    $table-bg-scale: -85%;
+
+    // Buttons
+    $btn-font-weight: $link-weight;
+
+    // Navbar
+    $navbar-nav-link-padding-x:         1.275em;
+
+    $navbar-padding-x:                  $grid-gutter-width * .5;
+
+    $navbar-dark-color:                 rgba($white, .55);
+    $navbar-dark-hover-color:           rgba($white, .75);
+
+    // Dropdowns
+    $dropdown-font-size:                inherit;
+    $dropdown-border-radius:            0;
+    $dropdown-link-color:               $body-color;
+
+    $dropdown-dark-color:               $navbar-dark-color;
+    $dropdown-dark-bg:                  $cfe-brown-lt;
+    $dropdown-dark-divider-bg:          rgba($white, .175);
+    $dropdown-dark-link-color:          $dropdown-dark-color;
+    $dropdown-dark-link-hover-color:    $navbar-dark-hover-color;
+    $dropdown-dark-link-hover-bg:       null;
+
+    // Pagination
+    $pagination-color:                  $body-color;
+    $pagination-bg:                     $white;
+    $pagination-border-color:           $gray-300;
+
+    $pagination-focus-color:            $white;
+    $pagination-focus-bg:               $cfe-blue;
+
+    $pagination-hover-color:            $white;
+    $pagination-hover-bg:               $cfe-blue;
+    $pagination-hover-border-color:     darken($pagination-hover-bg, 8%);
+
+    $pagination-active-color:           $light;
+    $pagination-active-bg:              $cfe-brown-lt;
+    $pagination-active-border-color:    darken($pagination-active-bg, 8%);
+
+    $pagination-disabled-color:         $gray-400;
+    $pagination-disabled-bg:            $gray-100;
+    $pagination-disabled-border-color:  darken($pagination-disabled-bg, 8%);
+
+    // Themes
+    $custom-theme-colours: (
+        "cfe-brown": $cfe-brown,
+        "cfe-green": $cfe-green,
+        "cfe-blue": $cfe-blue
+    );
+
+    $custom-table-variants: (
+        "cfe-brown": shift-color($cfe-brown, $table-bg-scale),
+        "cfe-green": shift-color($cfe-green, $table-bg-scale),
+        "cfe-blue": shift-color($cfe-blue, $table-bg-scale)
+    );

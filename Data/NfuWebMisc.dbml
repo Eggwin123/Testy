@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NFUWebMisc" Class="NfuWebMiscDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Function Name="dbo.Competitions_Add" Method="Competitions_Add">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Audience" Parameter="audience" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsAnOffer" Parameter="isAnOffer" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IsMembersOnly" Parameter="isMembersOnly" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="StartDate" Parameter="startDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="EndDate" Parameter="endDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="PostalAddress" Parameter="postalAddress" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Postcode" Parameter="postcode" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PhoneNumber" Parameter="phoneNumber" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EmailAddress" Parameter="emailAddress" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Newsletter" Parameter="newsletter" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DisplayTitle" Parameter="displayTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DisplayCopy" Parameter="displayCopy" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TermsAndConditionsURL" Parameter="termsAndConditionsURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BackgroundURL" Parameter="backgroundURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FeaturedImageURL" Parameter="featuredImageURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ThanksTitle" Parameter="thanksTitle" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ThanksMessage" Parameter="thanksMessage" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="Competitions_AddResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Answers_Add" Method="Competitions_Answers_Add">
+    <Parameter Name="EntryId" Parameter="entryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionId" Parameter="questionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Answer" Parameter="answer" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Competitions_Answers_GetByEntryId" Method="Competitions_Answers_GetByEntryId">
+    <Parameter Name="EntryId" Parameter="entryId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Competitions_Answers_GetByEntryIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EntryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuestionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Answer" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Entries_Add" Method="Competitions_Entries_Add">
+    <Parameter Name="CompetitionId" Parameter="competitionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Address1" Parameter="address1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Address2" Parameter="address2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Address3" Parameter="address3" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TownCity" Parameter="townCity" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="County" Parameter="county" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Postcode" Parameter="postcode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="EmailAddress" Parameter="emailAddress" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="PhoneNumber" Parameter="phoneNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SignUpToNewsletter" Parameter="signUpToNewsletter" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SocialId" Parameter="socialId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedDate" Parameter="createdDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MembershipNumber" Parameter="membershipNumber" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="Competitions_Entries_AddResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Entries_Delete" Method="Competitions_Entries_Delete">
+    <Parameter Name="EntryId" Parameter="entryId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Competitions_Entries_GetByCompetitionId" Method="Competitions_Entries_GetByCompetitionId">
+    <Parameter Name="CompetitionId" Parameter="competitionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Competitions_Entries_GetByCompetitionIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompetitionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Surname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TownCity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="County" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Postcode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SignUpToNewsletter" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SocialId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MembershipNumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Entries_GetCountByCompetitionId" Method="Competitions_Entries_GetCountByCompetitionId">
+    <Parameter Name="CompetitionId" Parameter="competitionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Competitions_Entries_GetCountByCompetitionIdResult">
+      <Column Name="Entries" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Get" Method="Competitions_Get">
+    <Parameter Name="GetActiveOnly" Parameter="getActiveOnly" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Audience" Parameter="audience" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="GetOffers" Parameter="getOffers" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="Competitions_GetResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsMembersOnly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Audience" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAnOffer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PostalAddress" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Postcode" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Newsletter" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayTitle" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayCopy" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TermsAndConditionsURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackgroundURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FeaturedImageURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ThanksTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ThanksMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_GetById" Method="Competitions_GetById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Competitions_GetByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsMembersOnly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Audience" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAnOffer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PostalAddress" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Postcode" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Newsletter" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayTitle" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayCopy" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TermsAndConditionsURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackgroundURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FeaturedImageURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ThanksTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ThanksMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_GetByName" Method="Competitions_GetByName">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="Competitions_GetByNameResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsMembersOnly" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Audience" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsAnOffer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PostalAddress" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Postcode" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PhoneNumber" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Newsletter" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayTitle" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayCopy" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TermsAndConditionsURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BackgroundURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FeaturedImageURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ThanksTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ThanksMessage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Questions_Add" Method="Competitions_Questions_Add">
+    <Parameter Name="CompetitionId" Parameter="competitionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Question" Parameter="question" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsBool" Parameter="isBool" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Required" Parameter="required" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Competitions_Questions_Delete" Method="Competitions_Questions_Delete">
+    <Parameter Name="QuestionId" Parameter="questionId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Competitions_Questions_GetByCompetitionId" Method="Competitions_Questions_GetByCompetitionId">
+    <Parameter Name="CompetitionId" Parameter="competitionId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Competitions_Questions_GetByCompetitionIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompetitionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsBool" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Questions_GetById" Method="Competitions_Questions_GetById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="Competitions_Questions_GetByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompetitionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsBool" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_Questions_Update" Method="Competitions_Questions_Update">
+    <Parameter Name="QuestionId" Parameter="questionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Question" Parameter="question" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsBool" Parameter="isBool" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Required" Parameter="required" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Competitions_Update" Method="Competitions_Update">
+    <Parameter Name="EntryId" Parameter="entryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Audience" Parameter="audience" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsAnOffer" Parameter="isAnOffer" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IsMembersOnly" Parameter="isMembersOnly" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="StartDate" Parameter="startDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="EndDate" Parameter="endDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="PostalAddress" Parameter="postalAddress" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Postcode" Parameter="postcode" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PhoneNumber" Parameter="phoneNumber" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EmailAddress" Parameter="emailAddress" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Newsletter" Parameter="newsletter" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="DisplayTitle" Parameter="displayTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DisplayCopy" Parameter="displayCopy" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TermsAndConditionsURL" Parameter="termsAndConditionsURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BackgroundURL" Parameter="backgroundURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FeaturedImageURL" Parameter="featuredImageURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ThanksTitle" Parameter="thanksTitle" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="ThanksMessage" Parameter="thanksMessage" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="Competitions_UpdateResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Competitions_UpdateStatus" Method="Competitions_UpdateStatus">
+    <Parameter Name="CompetitionId" Parameter="competitionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsDeleted" Parameter="isDeleted" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Competitions_Entries_Add_TMP" Method="Competitions_Entries_Add_TMP">
+    <Parameter Name="CompetitionId" Parameter="competitionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Address1" Parameter="address1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Address2" Parameter="address2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Address3" Parameter="address3" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TownCity" Parameter="townCity" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="County" Parameter="county" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Postcode" Parameter="postcode" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="EmailAddress" Parameter="emailAddress" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="PhoneNumber" Parameter="phoneNumber" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="SignUpToNewsletter" Parameter="signUpToNewsletter" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="SocialId" Parameter="socialId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedDate" Parameter="createdDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="MembershipNumber" Parameter="membershipNumber" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="Competitions_Entries_Add_TMPResult">
+      <Column Name="Error" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

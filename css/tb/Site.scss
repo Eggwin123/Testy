@@ -1,0 +1,863 @@
+﻿/*!
+*  TB Free England
+*  THIS STYLESHEET IS COMPILED FROM A MASTER SASS FILE
+*  Please edit that rather than the compiled CSS files
+*/
+
+// Configuration
+@import "../../lib/bootstrap-5.2/scss/functions";
+@import "_variables.scss";
+@import "../../lib/bootstrap-5.2/scss/variables";
+@import "_maps.scss";
+@import "../../lib/bootstrap-5.2/scss/maps";
+@import "../../lib/bootstrap-5.2/scss/mixins";
+@import "../../lib/bootstrap-5.2/scss/utilities";
+
+// Layout & components
+@import "../../lib/bootstrap-5.2/scss/root";
+@import "../../lib/bootstrap-5.2/scss/reboot";
+@import "../../lib/bootstrap-5.2/scss/type";
+@import "../../lib/bootstrap-5.2/scss/images";
+@import "../../lib/bootstrap-5.2/scss/containers";
+@import "../../lib/bootstrap-5.2/scss/grid";
+//@import "../../lib/bootstrap-5.2/scss/tables";
+@import "../../lib/bootstrap-5.2/scss/forms";
+@import "../../lib/bootstrap-5.2/scss/buttons";
+@import "../../lib/bootstrap-5.2/scss/transitions";
+//@import "../../lib/bootstrap-5.2/scss/dropdown";
+//@import "../../lib/bootstrap-5.2/scss/button-group";
+@import "../../lib/bootstrap-5.2/scss/nav";
+@import "../../lib/bootstrap-5.2/scss/navbar";
+@import "../../lib/bootstrap-5.2/scss/card";
+@import "../../lib/bootstrap-5.2/scss/accordion";
+@import "../../lib/bootstrap-5.2/scss/breadcrumb";
+@import "../../lib/bootstrap-5.2/scss/pagination";
+//@import "../../lib/bootstrap-5.2/scss/badge";
+@import "../../lib/bootstrap-5.2/scss/alert"; //Needed for BrowseHappy
+//@import "../../lib/bootstrap-5.2/scss/progress";
+//@import "../../lib/bootstrap-5.2/scss/list-group";
+@import "../../lib/bootstrap-5.2/scss/close";
+//@import "../../lib/bootstrap-5.2/scss/toasts";
+@import "../../lib/bootstrap-5.2/scss/modal";
+//@import "../../lib/bootstrap-5.2/scss/tooltip";
+//@import "../../lib/bootstrap-5.2/scss/popover";
+//@import "../../lib/bootstrap-5.2/scss/carousel";
+//@import "../../lib/bootstrap-5.2/scss/spinners";
+//@import "../../lib/bootstrap-5.2/scss/offcanvas";
+@import "../../lib/bootstrap-5.2/scss/placeholders";
+
+// Helpers
+@import "../../lib/bootstrap-5.2/scss/helpers";
+
+// Utilities
+@import "../../lib/bootstrap-5.2/scss/utilities/api";
+
+
+
+
+
+/* #region general FIXED */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    & main {
+        flex: 1 0 auto;
+    }
+
+    & nav,
+    & #breadcrumbs,
+    & footer {
+        flex-shrink: 0;
+    }
+}
+
+::-moz-selection {
+    background: $colour-lightAccent;
+    text-shadow: none;
+}
+
+::selection {
+    background: $colour-lightAccent;
+    text-shadow: none;
+}
+
+hr {
+    margin: 2em 0;
+}
+
+.img-responsive {
+    @extend .img-fluid;
+}
+
+.img-fluid {
+    width: 100%;
+}
+
+.cms-content img {
+    max-width: 100%;
+
+    @include media-breakpoint-only(xs) {
+        width: 100%;
+    }
+}
+
+.fallback {
+    display: none;
+}
+
+.no-svg .fallback {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* #endregion */
+
+
+@include media-breakpoint-down(md) {
+    .container {
+        --bs-gutter-x: 3rem;
+    }
+}
+
+.tbcontentpage:not(.tblistingpage) main,
+.tbfaqpage .accordion-item {
+    .container {
+        max-width: 45rem;
+    }
+}
+
+
+/* #region spacing FIXED */
+main,
+footer {
+    margin-top: 2rem;
+}
+
+main {
+    .umb-grid {
+        .grid-section {
+            > div:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .row {
+            > .column {
+                &[class*="col-md-"]:not(:last-child) {
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                &[class*="col-md-"] {
+                    @include media-breakpoint-down(md) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+
+                &[class*="col-md-"]:first-child {
+                    @include media-breakpoint-up(md) {
+                        padding-left: 0;
+                    }
+                }
+
+                &[class*="col-md-"]:last-child {
+                    @include media-breakpoint-up(md) {
+                        padding-right: 0;
+                    }
+                }
+
+                *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+section > *:last-child:not(hr) {
+    margin-bottom: 0;
+}
+
+main div.ratio:not(:last-child) {
+    margin-bottom: 1rem;
+}
+/* #endregion */
+
+
+/* #region nav FIXED */
+nav.navbar {
+    min-height: 3.5rem;
+
+    .navbar-brand,
+    .navbar-brand > svg,
+    .navbar-brand > img {
+        display: block;
+        height: 2rem;
+        width: 2rem * $logoLine-ratio;
+
+        @include media-breakpoint-up(sm) {
+            height: 2.75rem;
+            width: 2.75rem * $logoLine-ratio;
+        }
+
+
+        @include media-breakpoint-up(lg) {
+            height: 4.75rem;
+            width: 4.75rem * $logo-ratio;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        .navbar-brand {
+            background-image: url(/media/s2bihifb/logowhite-line.svg);
+            background-size: cover;
+
+            > * {
+                display: none !important;
+            }
+        }
+    }
+
+    #mainNav {
+        @include media-breakpoint-down(lg) {
+            margin-top: .5em;
+            border-top: 1px solid $white;
+        }
+
+        > div {
+            @include media-breakpoint-up(md) {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            @include media-breakpoint-only(md) {
+                margin-top: .5rem;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+
+                & ul {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    form[role=search] {
+        flex-wrap: nowrap;
+
+        input {
+            color: $white;
+            border: 0;
+            border-bottom: 1px solid $alpha-tb-white;
+            border-radius: 0;
+            background: none;
+
+            &::-webkit-input-placeholder {
+                color: $alpha-tb-white;
+                font-size: 75%;
+                text-align: center;
+            }
+
+            &::-ms-input-placeholder {
+                color: $alpha-tb-white;
+                font-size: 75%;
+                text-align: center;
+            }
+
+            &::placeholder {
+                color: $alpha-tb-white;
+                font-size: 75%;
+                text-align: center;
+            }
+
+            &[type=search]:focus:not([readonly]) {
+                border-bottom: 1px solid $white;
+                box-shadow: 0 1px 0 0 $white;
+                background: none;
+            }
+        }
+
+        i {
+            color: $alpha-tb-white;
+
+            &:hover,
+            &:active {
+                color: $white;
+            }
+        }
+    }
+}
+/* #endregion */
+
+
+/* #region breadcrumbs FIXED */
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+
+    a {
+        color: $white;
+    }
+
+    &::before {
+        line-height: 1;
+    }
+}
+/* #endregion */
+
+
+/* #region footer FIXED */
+footer.navbar {
+
+    .navbar-brand,
+    .navbar-brand svg,
+    .navbar-brand img {
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem * $nfulogo-ratio;
+    }
+
+    @include media-breakpoint-up(sm) {
+        .navbar-nav .nav-link {
+            line-height: $line-height-sm;
+        }
+    }
+}
+/* #endregion */
+
+
+/* #region accordion FIXED */
+.accordion .accordion-button {
+    font-size: inherit;
+    font-weight: inherit;
+}
+/* #endregion */
+
+
+
+
+
+
+
+
+
+
+
+/*#region general*/
+.content-block-default {
+    @extend .p-4;
+    border-top: .25em solid $colour-darkAccent;
+    border-bottom: .25em solid $colour-darkAccent;
+}
+
+figure {
+    font-size: 1em;
+
+    figcaption {
+        background-color: $colour-lightAccent;
+        color: $colour-offWhite;
+        padding: .25em .5em;
+        font-style: italic;
+        font-size: .8em;
+        text-align: center;
+    }
+}
+/*#endregion*/
+
+
+/*#region typography*/
+body {
+    font-size: 100%;
+
+    @include media-breakpoint-up(md) {
+        font-size: 112.5%;
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 125%;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    letter-spacing: -.0125em;
+    margin-bottom: 1rem;
+
+    &:not(:first-child) {
+        margin-top: 3rem;
+    }
+
+    & strong {
+        font-weight: $font-weight-display;
+    }
+}
+
+.cms-content {
+    & h3, & h4, & h5, & h6 {
+        color: $colour-mainBrand;
+    }
+
+    & .content-block-default {
+        & h3, & h4, & h5, & h6 {
+            color: $colour-darkAccent;
+        }
+    }
+}
+
+ol, ul, dl {
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+main {
+
+    & a {
+        font-weight: $font-weight-bold;
+        font-style: italic;
+    }
+
+    & a {
+        & h1, & h2, & h3, & h4, & h5, & h6 {
+            font-weight: $font-weight-display;
+            font-style: normal;
+        }
+    }
+
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        & a {
+            font-weight: $font-weight-display;
+            font-style: normal;
+        }
+    }
+
+    & ul:not(.pagination), & ol {
+        padding-left: 1.75em;
+
+        & li {
+            padding-left: .5em;
+            margin-bottom: .5em;
+
+            &:last-child,
+            & *:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+nav,
+footer {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+abbr, .abbr {
+
+    &[title],
+    &[data-bs-original-title] {
+        cursor: help;
+        border-bottom: 2px dotted;
+        text-decoration: none;
+    }
+
+    &.initialism {
+        font-size: $small-font-size;
+        text-transform: uppercase;
+    }
+}
+/*#endregion*/
+
+
+/*#region blockquotes*/
+blockquote,
+.blockquote {
+    position: relative;
+    background-color: $colour-darkAccent;
+    margin: 0 2.5rem 1rem;
+    padding: 1.5em;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: normal;
+        font-weight: bold;
+        position: absolute;
+        font-size: 10em;
+        color: $white;
+        opacity: .1;
+    }
+
+    &::before {
+        content: '\201C';
+        top: -6rem;
+        left: .5rem;
+    }
+
+    &::after {
+        content: '\201D';
+        bottom: -12rem;
+        right: .5rem;
+    }
+
+    & p {
+        color: $white;
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+/*#endregion*/
+
+
+/*#region hero*/
+#hero {
+}
+
+#hero {
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .overlay {
+        padding: 8rem 0 2rem;
+
+        @include media-breakpoint-up(md) {
+            padding: 12rem 0 3rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 16rem 0 4rem;
+        }
+
+        .hero-banner-headline {
+            text-shadow: .04em .08em .12em $alpha-tb-black;
+        }
+    }
+
+    a {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+/*#endregion*/
+
+
+/*#region pagination*/
+#pagination {
+    margin-top: 2em;
+}
+/*#endregion*/
+
+
+/*#region cards*/
+.listings {
+
+    & .card {
+        background-color: $colour-offWhite;
+        border: none;
+        transition: ease-in-out .3s;
+
+        & .card-body {
+            & *:last-child {
+                margin-bottom: 0;
+            }
+
+            & .card-title {
+                margin-top: .5em;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        & .card-footer {
+            border: none;
+        }
+
+        &:hover, &:focus, &:active {
+
+            @include media-breakpoint-up(md) {
+                transform: scale(1.04);
+            }
+
+            background-color: $colour-mainBrand;
+            border: none;
+
+            & .card-body {
+                color: $white;
+            }
+        }
+
+        & a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: $colour-mainBrand;
+
+            & img {
+                display: block;
+                height: auto;
+                width: 100%;
+            }
+
+            @include media-breakpoint-up(sm) {
+                height: 16em;
+
+                & img {
+                    height: 105%;
+                    width: auto;
+                }
+            }
+
+            @include media-breakpoint-up(md) {
+                height: 14em;
+            }
+
+            @include media-breakpoint-up(lg) {
+                height: 16em;
+            }
+
+            @include media-breakpoint-up(xl) {
+                height: 12em;
+            }
+        }
+
+        &.asset {
+
+            &.asset-pdf .card-footer {
+                background-color: $file-pdf;
+            }
+
+            &.asset-word .card-footer {
+                background-color: $file-word;
+            }
+
+            &.asset-image .card-footer {
+                background-color: $file-image;
+            }
+        }
+    }
+
+    & .searchresults {
+
+        & .searchterm {
+            color: $colour-lightAccent;
+            font-weight: bold;
+        }
+    }
+
+    &.homelistings {
+        & .card {
+
+            & a {
+
+                @include media-breakpoint-up(sm) {
+                    height: 16em;
+                }
+
+                @include media-breakpoint-up(md) {
+                    height: 20em;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    height: 10em;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    height: 12em;
+                }
+            }
+        }
+    }
+
+    &.assetlistings {
+        & .card {
+
+            & a {
+                background-color: unset;
+
+                @include media-breakpoint-up(sm) {
+                    height: 14em;
+                }
+
+                @include media-breakpoint-up(md) {
+                    height: 16em;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    height: 12em;
+                }
+            }
+        }
+    }
+}
+/*#endregion*/
+
+
+/* #region infographic modal */
+.infographic-modal-trigger {
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.infographic-modal {
+    & .modal-dialog {
+        @include media-breakpoint-up(md) {
+            max-width: 800px;
+        }
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+
+    & section.social-share {
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        & > a {
+            flex-grow: 2;
+            background: $gray-800;
+            text-align: center;
+            line-height: 2em;
+
+            &.download {
+                background: $gray-600;
+            }
+
+            &.linkedin {
+                background: $linkedin;
+            }
+
+            &.facebook {
+                background: $facebook;
+            }
+
+            &.twitter {
+                background: $twitter-black;
+
+            }
+
+            &.pinterest {
+                background: $pinterest;
+            }
+
+            &.whatsapp {
+                background: $whatsapp;
+            }
+
+            &.email {
+                background: $gray-600;
+            }
+        }
+
+        & > a,
+        & > a:hover,
+        & > a:visited,
+        & > a:active {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+/* #endregion */
+
+
+/* #region IE flexbox fixes */
+.no-flexboxlegacy {
+    & body {
+        display: block;
+        flex-direction: unset;
+    }
+
+    & nav .navbar-collapse {
+        display: block;
+
+        & > div {
+            display: block;
+
+            & li {
+                display: inline-block;
+            }
+        }
+    }
+}
+/* #endregion */
+
+
+/* search style for tb free*/
+#filterContent #mobileFilterBtn,
+.tb-free #filterContent #sort,
+.tb-free #filterContent .input-group-text {
+    display: none;
+}
+
+.tb-free .container.d-none {
+    font-size: 1rem;
+    line-height: 1.15;
+    background-color: #9cc9b7;
+    max-width: 100% !important;
+
+    ol {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.25rem 0;
+        margin: auto !important;
+        width: 11%;
+        color: #fff;
+
+        .bi {
+            display: none;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            font-size: .79em;
+            line-height: 1.15;
+
+            .fallback {
+                color: #fff;
+                margin-right: 2rem;
+            }
+
+            a:hover {
+                color: #fff;
+                text-decoration-color: #fff;
+            }
+
+            .active::before {
+                color: #fff;
+                margin-right: 2rem;
+                content: "\203A";
+            }
+        }
+    }
+}
+/* end -- search styling for tb free*/

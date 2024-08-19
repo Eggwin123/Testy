@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CustomWebsiteData">
+  <DataContextMoniker Name="/CustomWebsiteDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fa84bcbc-6c28-49e5-b6ad-8bb4fec2c4c7" absoluteBounds="1.125, 3.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/CustomWebsiteDataDataContext/Roadmap_Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ffdefd4-0f75-46af-ab85-0292cb65818e" absoluteBounds="1.1400000000000001, 4.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3eb0f6b-01cd-42c5-b9b0-b650256508da" absoluteBounds="2.5, 2, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/CustomWebsiteDataDataContext/Roadmap_Chart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7db5aa6-dc4b-45a7-a78f-cb96d44c522c" absoluteBounds="2.515, 2.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4015cedc-085c-4a1f-b491-21afe4ea8124" absoluteBounds="6.5, 2.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/CustomWebsiteDataDataContext/Roadmap_Entry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2af062f-bed7-40d4-959d-211f51df30ba" absoluteBounds="6.515, 3.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0d96c89-a5dd-4c66-b1da-14b43fe90634" absoluteBounds="5.625, 4.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CustomWebsiteDataDataContext/Roadmap_Timeframe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33e2a35f-8c72-46b4-b7fc-b5337c703c9c" absoluteBounds="5.64, 5.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55a61b71-5e6b-4902-8f50-34592b37b6c8" absoluteBounds="1.375, 1.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/CustomWebsiteDataDataContext/Roadmap_Value" />
+      <nestedChildShapes>
+        <elementListCompartment Id="baad0ef2-52a0-46a8-9d14-0258837b0b71" absoluteBounds="1.3900000000000001, 1.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b9c06a4-d0c7-435b-a088-b31e7a9ec1c7" absoluteBounds="4.125, 3.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/CustomWebsiteDataDataContext/IpmSuggestion" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36e1a0f1-2e44-4c27-9261-b49598d81478" absoluteBounds="4.14, 3.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

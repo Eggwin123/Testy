@@ -1,0 +1,182 @@
+.display-1, h1, .h1,
+.display-2, h2, .h2,
+.display-3, h3, .h3,
+.display-4, h4, .h4,
+.display-5, h5, .h5,
+.display-6, h6, .h6 {
+	font-weight: bolder;
+	line-height: 1.15;
+}
+
+.display-1 {
+	font-size: 3.75rem;
+}
+
+.display-2 {
+	font-size: 3.5rem;
+}
+
+.display-3 {
+	font-size: 3.25rem;
+}
+
+.display-4 {
+	font-size: 3rem;
+}
+
+.display-5 {
+	font-size: 2.75rem;
+}
+
+.display-6 {
+	font-size: 2.5rem;
+}
+
+h1, .h1 {
+	font-size: 2.55rem;
+}
+
+h2, .h2 {
+	font-size: 2.05rem;
+}
+
+h3, .h3 {
+	font-size: 1.75rem;
+}
+
+h4, .h4 {
+	font-size: 1.55rem;
+}
+
+h5, .h5 {
+	font-size: 1.35rem;
+}
+
+h6, .h6 {
+	font-size: 1.15rem;
+}
+
+ul, ol, li {
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+.childcontentlisting::before {
+	content: 'Child content listing';
+}
+
+.childcontentlisting * {
+	display: none;
+}
+
+.childcontentlisting .sectionTitle {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+table {
+	max-width: 100%;
+}
+
+#themeBanner > div {
+	width: 20%;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border: 1px solid lightgray;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
+}
+
+blockquote {
+	background: #f3f5f3;
+	border-left-width: 0.75rem;
+	border-left-style: solid;
+	border-left-color: #72c392;
+	margin-bottom: 1.5rem;
+	padding: 0.75em 1.5rem;
+	width: 100%;
+}
+
+	blockquote.blockquote-alt {
+		background: #f3f5f3;
+		border-left-width: 0.75rem;
+		border-left-style: solid;
+		border-left-color: #2fabe2;
+		margin-bottom: 1.5rem;
+		padding: 0.75em 1.5rem;
+		width: 100%;
+	}
+
+
+
+
+
+
+
+/**umb_name:Paragraph p*/
+p {
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+/**umb_name:Abbreviation*/
+.abbr {
+	cursor: help;
+	border-bottom: 2px dotted;
+}
+
+	/**umb_name:Initialism*/
+	.abbr initialism {
+		cursor: help;
+		border-bottom: 2px dotted;
+		font-size: .8em;
+		text-transform: uppercase;
+	}
+
+/**umb_name:Highlighted text*/
+.mark {
+	padding: .2em;
+	background-color: #fcf8e3;
+}
+
+/**umb_name:Highlighted red*/
+.highlight-red {
+	padding: .2em !important;
+	background-color: #ff8888 !important;
+}
+
+/**umb_name:Highlighted green*/
+.highlight-green {
+	padding: .2em !important;
+	background-color: #88ff88 !important;
+}
+
+/**umb_name:Image caption*/
+.nfu-caption {
+	font-size: .8em;
+	color: #637e7e;
+	margin-top: -1.25em;
+	display: block;
+}
+
+/**umb_name:Float Left*/
+.float-start {
+	float: left;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+}
+
+/**umb_name:Float Right*/
+.float-end {
+	float: right;
+	margin-bottom: 1rem;
+	margin-left: 1rem;
+}

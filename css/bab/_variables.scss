@@ -1,0 +1,290 @@
+﻿@import "../shared/colours";
+
+
+// BAB Primary
+$bab-primary-50:  #f1f9f3;
+$bab-primary-100: #c2e7cc;
+$bab-primary-200: #9ad8ac;
+$bab-primary-300: #6fca8b;
+$bab-primary-400: #4bbe72;
+$bab-primary-500: #1eb259; //primary
+$bab-primary-600: #13a350;
+$bab-primary-700: #009144; //grassgreen
+$bab-primary-800: #008039;
+$bab-primary-900: #006124;
+
+// BAB Secondary
+$bab-secondary-50:  #eef3fb;
+$bab-secondary-100: #ccd9e7;
+$bab-secondary-200: #b0c0d1;
+$bab-secondary-300: #93a6bb;
+$bab-secondary-400: #7c92aa;
+$bab-secondary-500: #667f9a;
+$bab-secondary-600: #587088; //secondary kashmir
+$bab-secondary-700: #485c71;
+$bab-secondary-800: #39495b;
+$bab-secondary-900: #273443;
+
+// BAB Accent
+$bab-accent-50:  #dcf2f0;
+$bab-accent-100: #a9ded7;
+$bab-accent-200: #6ec8be;
+$bab-accent-300: #1eb2a4; //accent babteal
+$bab-accent-400: #00a290;
+$bab-accent-500: #00917d;
+$bab-accent-600: #008470;
+$bab-accent-700: #007460;
+$bab-accent-800: #006452;
+$bab-accent-900: #004836;
+
+$primary:      $bab-primary-500;
+$primary-dk:   $nfu-700; //#006938
+$primary-lt:   $nfu-300; //#72c392
+$secondary-dk: $bab-secondary-900; //text-light
+$secondary:    $bab-secondary-600; //text-light
+$secondary-lt: $bab-secondary-400; //text-dark
+$accent-dk:    $bab-accent-600;
+$accent:       $bab-accent-300;
+$accent-lt:    $bab-accent-100;
+
+// BAB Accents
+//$sapphire:          #035e7b;
+//$aero:              #7bb2d9;
+//$dark-electic-blue: #546a7b;
+//$blue-munsell:      #2d93ad;
+//$un-blue:           #6290c3;
+//$cadmium:           hsl(25, 87%, 62%);  //f28f4b
+//$sea-green:         #20b2a6;
+//$cruise:            #a9ddd8;
+//$apple:             hsl(110, 47%, 46%); //50ab3e
+//$bayleaf:           hsl(120, 25%, 57%); //74ae74
+//$sprout:            hsl(92, 35%, 69%);  //afcc96
+//$celery:            hsl(76, 54%, 55%);  //aaca50
+
+
+
+
+
+//custom variables
+// Logos
+$bablogo-ratio: 1493/886;
+$bablogostrap-ratio: 1493/994;
+$bablogostrapalt-ratio: 2558/886;
+$bablogogram-ratio: 1493/768;
+$nfulogo-ratio: 872/240;
+$nfulogostrap-ratio: 2350/260;
+// Colour system
+$gray-100:  $nfu-gray-100;
+$gray-200:  $nfu-gray-200;
+$gray-300:  $nfu-gray-300;
+$gray-400:  $nfu-gray-400;
+$gray-500:  $nfu-gray-500;
+$gray-600:  $nfu-gray-600;
+$gray-700:  $nfu-gray-700;
+$gray-800:  $nfu-gray-800;
+$gray-900:  $nfu-gray-900;
+$success:   $primary;
+$danger:    $cymru-red;
+$info:      $sky-blue;
+$gray:      $gray-600;
+$gray-dark: $gray-800;
+$light:     $gray-100;
+$dark:      $gray-800;
+// Body
+$body-color: $gray-800;
+// Links
+$link-color: $sky-blue;
+$link-hover-decoration: none;
+// Paragraphs
+$paragraph-margin-bottom: 1.5rem;
+// Grid breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    vs: 480px,
+    sm: 576px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1366px,
+    xxl: 1600px
+);
+// Grid containers
+$container-max-widths: (
+    sm: 540px,
+    md: 740px,
+    lg: 1000px,
+    xl: 1260px
+);
+// Grid columns
+$grid-gutter-width: 2rem;
+// Components
+$aspect-ratios: (
+    "1x1": 100%,
+    "4x3": calc(3 / 4 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+    "21x9": calc(9 / 21 * 100%),
+    "a-portrait": calc(420 / 297 * 102.5%),
+    "a-landscape": calc(297 / 420 * 102.5%)
+);
+$component-active-bg: $primary-dk;
+// Typography
+$font-family-sans-serif: 'Source Sans Pro', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-base: 1em;
+$font-tags: 1.3rem;
+$header-size-base: 1em;
+$header-size-scale: 1.15;
+$font-size-sm: $font-base * .8;
+$font-weight-bold: 600;
+$font-weight-bolder: $font-weight-bold;
+$line-height-base: 1.6;
+$line-height-sm: 1.15;
+$line-height-md: 1.3;
+$line-height-lg: $line-height-base;
+$h6-font-size: $header-size-base * $header-size-scale;
+$h5-font-size: $h6-font-size * $header-size-scale;
+$h4-font-size: $h5-font-size * $header-size-scale;
+$h3-font-size: $h4-font-size * $header-size-scale;
+$h2-font-size: $h3-font-size * $header-size-scale;
+$h1-font-size: $h2-font-size * $header-size-scale;
+// Headings
+$headings-font-family: 'Poppins', $font-family-sans-serif;
+$headings-font-weight: 700;
+$headings-line-height: $line-height-sm;
+$lead-font-weight: $font-weight-bold;
+$small-font-size: $font-size-sm;
+$text-muted: $gray-500;
+// Tables
+$table-master-color: $secondary-lt;
+$table-cell-vertical-align: middle;
+$table-striped-bg-factor: .1;
+$table-striped-bg: rgba($table-master-color, $table-striped-bg-factor);
+$table-active-bg-factor: .2;
+$table-active-bg: rgba($table-master-color, $table-active-bg-factor);
+$table-hover-bg-factor: .3;
+$table-hover-bg: rgba($table-master-color, $table-hover-bg-factor);
+$table-border-width: .125rem;
+$table-border-color: $table-master-color;
+$table-bg-scale: -85%;
+// Navbar
+$navbar-nav-link-padding-x: 0;
+$navbar-brand-padding-y: 0;
+$navbar-brand-margin-end: auto;
+$navbar-toggler-font-size: $font-base;
+// Dropdowns
+$dropdown-link-color: $gray-600;
+$dropdown-link-disabled-color: $gray-400;
+// Accordion
+$accordion-button-active-color: $primary-dk;
+$accordion-icon-width: 1.875rem;
+$accordion-icon-color: $secondary;
+$accordion-icon-active-color: $primary-dk;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/><path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+// Popover-variables
+$popover-max-width: 300px;
+$popover-border-color: rgba($primary, .5);
+$popover-header-color: $primary;
+$popover-arrow-outer-color: fade-in($popover-border-color, .15);
+// Pagination
+$pagination-color:                  $body-color;
+$pagination-bg:                     $white;
+$pagination-border-color:           $gray-300;
+
+$pagination-focus-color:            $white;
+$pagination-focus-bg:               $nfu-600;
+
+$pagination-hover-color:            $white;
+$pagination-hover-bg:               $nfu-600;
+$pagination-hover-border-color:     darken($pagination-hover-bg, 8%);
+
+$pagination-active-color:           $white;
+$pagination-active-bg:              $nfu-200;
+$pagination-active-border-color:    darken($pagination-active-bg, 8%);
+
+$pagination-disabled-color:         $gray-400;
+$pagination-disabled-bg:            $gray-100;
+$pagination-disabled-border-color:  darken($pagination-disabled-bg, 8%);
+
+
+
+
+// import functions and variables
+@import "../../lib/bootstrap/scss/functions";
+@import "../../lib/bootstrap/scss/variables";
+
+$custom-theme-colours: (
+    "nfu":          $nfu-green,
+    "cymru":        $cymru-red,
+    "primary-dk":   $primary-dk,
+    "primary-lt":   $primary-lt,
+    "secondary-dk": $secondary-dk,
+    "secondary-lt": $secondary-lt,
+    "accent":       $accent,
+    "accent-dk":    $accent-dk,
+    "accent-lt":    $accent-lt
+);
+
+$custom-table-variants: ( "nfu": shift-color($nfu-green, $table-bg-scale), "cymru": shift-color($cymru-red, $table-bg-scale), "primary-dk": shift-color($primary-dk, $table-bg-scale), "primary-lt": shift-color($primary-lt, $table-bg-scale), "secondary-dk": shift-color($secondary-dk, $table-bg-scale), "secondary-lt": shift-color($secondary-lt, $table-bg-scale), "accent": shift-color($accent, $table-bg-scale), "accent-dk": shift-color($accent-dk, $table-bg-scale), "accent-lt": shift-color($accent-lt, $table-bg-scale) );
+
+$colors: map-remove($colors, "indigo", "purple", "pink", "teal", "cyan");
+$theme-colors: map-merge($custom-theme-colours, $theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: $theme-colors-rgb;
+$utilities-text: map-merge($utilities-colors, ("black": to-rgb($black), "white": to-rgb($white), "body": to-rgb($body-color)));
+$utilities-text-colors: map-loop($utilities-text, rgba-css-var, "$key", "text");
+$utilities-bg: map-merge($utilities-colors, ( "black": to-rgb($black), "white": to-rgb($white), "body": to-rgb($body-bg)));
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+$table-variants: map-merge($custom-table-variants, $table-variants);
+
+$breadcrumb-link-color: $primary;
+$breadcrumb-link-hover-color: shift-color($breadcrumb-link-color, $link-shade-percentage);
+
+
+// import bootstrap to merge
+//@import "../../lib/bootstrap/scss/bootstrap";
+// Configuration
+@import "../../lib/bootstrap/scss/functions";
+@import "../../lib/bootstrap/scss/variables";
+@import "../../lib/bootstrap/scss/mixins";
+@import "../../lib/bootstrap/scss/utilities";
+// Layout & components
+@import "../../lib/bootstrap/scss/root";
+@import "../../lib/bootstrap/scss/reboot";
+@import "../../lib/bootstrap/scss/type";
+@import "../../lib/bootstrap/scss/images";
+@import "../../lib/bootstrap/scss/containers";
+@import "../../lib/bootstrap/scss/grid";
+@import "../../lib/bootstrap/scss/tables";
+@import "../../lib/bootstrap/scss/forms";
+@import "../../lib/bootstrap/scss/buttons";
+@import "../../lib/bootstrap/scss/transitions";
+@import "../../lib/bootstrap/scss/dropdown";
+@import "../../lib/bootstrap/scss/button-group";
+@import "../../lib/bootstrap/scss/nav";
+@import "../../lib/bootstrap/scss/navbar";
+@import "../../lib/bootstrap/scss/card";
+@import "../../lib/bootstrap/scss/accordion";
+@import "../../lib/bootstrap/scss/breadcrumb";
+@import "../../lib/bootstrap/scss/pagination";
+@import "../../lib/bootstrap/scss/badge";
+@import "../../lib/bootstrap/scss/alert";
+//@import "../../lib/bootstrap/scss/progress";
+@import "../../lib/bootstrap/scss/list-group";
+@import "../../lib/bootstrap/scss/close";
+//@import "../../lib/bootstrap/scss/toasts";
+@import "../../lib/bootstrap/scss/modal";
+@import "../../lib/bootstrap/scss/tooltip";
+@import "../../lib/bootstrap/scss/popover";
+@import "../../lib/bootstrap/scss/carousel";
+//@import "../../lib/bootstrap/scss/spinners";
+@import "../../lib/bootstrap/scss/offcanvas";
+@import "../../lib/bootstrap/scss/placeholders";
+// Helpers
+@import "../../lib/bootstrap/scss/helpers";
+// Utilities
+@import "../../lib/bootstrap/scss/utilities/api";
+
+
+
+
+// custom mixins
+@import "../shared/mixins";

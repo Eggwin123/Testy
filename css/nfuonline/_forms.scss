@@ -1,0 +1,36 @@
+﻿.grecaptcha-badge {
+    visibility: hidden;
+}
+
+.grecaptchaBranding {
+    width: 100%;
+    padding-top: 1rem;
+    font-size: $font-size-sm;
+
+    a {
+        font-weight: normal;
+    }
+}
+
+#subscriptionBox,
+#form-outer {
+    .row {
+        .col-md-6 {
+            width: calc( (100% - (2 * .5rem) ) / 2 );
+        }
+
+        .col-md-4 {
+            width: calc( (100% - (4 * .5rem) ) / 3 );
+        }
+    }
+}
+
+.field-validation-error,
+.validation-summary-errors {
+    @extend .text-danger;
+}
+
+.emailform .field-validation-valid,
+.login main .field-validation-valid {
+    display: none;
+}

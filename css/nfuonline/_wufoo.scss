@@ -1,0 +1,107 @@
+﻿@import "variables";
+
+html.embed {
+    background-color: transparent;
+
+    body {
+        background-color: transparent;
+    }
+
+    #logo {
+        display: none !important;
+    }
+}
+
+.wufoo {
+    font-family: sans-serif;
+    font-family: var(--bs-font-sans-serif);
+
+    .info {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .info h2 {
+        font-size: $h2-font-size !important;
+        font-weight: $headings-font-weight;
+    }
+
+    label,
+    legend {
+        &.desc {
+            font-size: unset !important;
+            font-weight: $font-weight-base;
+            margin-bottom: $form-label-margin-bottom;
+        }
+    }
+
+    input.text,
+    textarea.textarea {
+        @extend .form-control;
+    }
+
+    select.select {
+        @extend .form-select;
+    }
+
+    .subfield {
+        @extend .form-check;
+        display: inline-flex !important;
+        float: none;
+
+        input.checkbox {
+            @extend .form-check-input;
+        }
+
+        label.choice {
+            @extend .form-check-label;
+            margin-top: 0 !important;
+            margin-right: 0 !important;
+            margin-bottom: 0 !important;
+            margin-left: .6em !important;
+        }
+    }
+
+    .notStacked {
+        .subfield {
+            margin-right: .6em;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        label.choice {
+            padding-bottom: 0;
+            width: auto;
+        }
+    }
+
+    .buttons {
+        @extend .cta-membership;
+        text-align: left !important;
+
+        .submit {
+            @extend .btn, .btn-primary, .text-white;
+        }
+    }
+}
+
+@media screen {
+
+    @include media-breakpoint-down(md) {
+        .wufoo li {
+            width: 100% !important;
+
+            &.focused {
+
+                .instruct {
+                    position: relative;
+                    left: 0;
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

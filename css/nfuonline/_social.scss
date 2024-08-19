@@ -1,0 +1,19 @@
+﻿#socialLinks .list-inline-item:hover a {
+    color: $social-generic;
+
+    &[href*="twitter"] {
+        color: $twitter;
+    }
+
+    &[href*="facebook"] {
+        color: $facebook;
+    }
+
+    &[href*="linkedin"] {
+        color: $linkedin;
+    }
+
+    &[href*="instagram"] {
+        color: $instagram;
+    }
+}
